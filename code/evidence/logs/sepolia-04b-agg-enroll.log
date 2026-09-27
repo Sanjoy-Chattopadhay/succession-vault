@@ -1,0 +1,35 @@
+# 2026-09-25 22:21:47 UTC  |  host  |  <repo>
+$ forge script script/DemoAgg.s.sol --sig enroll() --rpc-url https://ethereum-sepolia-rpc.publicnode.com --broadcast --slow
+
+No files changed, compilation skipped
+Script ran successfully.
+
+== Logs ==
+  enrolled at slot 0
+  enrollment root now 21187593778021243980263895176611929474201635176487379543579942094349219027061
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 11155111
+
+Estimated gas price: 2.08967099 gwei
+
+Estimated total gas used for script: 450295
+
+Estimated amount required: 0.00094096839844205 ETH
+
+==========================
+
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+
+Transactions saved to: <repo>/broadcast\DemoAgg.s.sol\11155111\enroll-latest.json
+
+Sensitive values saved to: <repo>/cache\DemoAgg.s.sol\11155111\enroll-latest.json
+
+
+# exit code: 0

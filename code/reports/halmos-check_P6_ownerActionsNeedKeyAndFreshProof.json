@@ -1,0 +1,24 @@
+{
+    "exitcode": 1,
+    "test_results": {
+        "test/halmos/VaultSymbolic.t.sol:VaultSymbolic": [
+            {
+                "name": "check_P6_ownerActionsNeedKeyAndFreshProof(uint256)",
+                "exitcode": 5,
+                "num_models": 0,
+                "models": [],
+                "num_paths": [
+                    7251,
+                    7236,
+                    0
+                ],
+                "time": [
+                    4373.253399000001,
+                    4373.253006999999,
+                    0.0003865000035148114
+                ],
+                "num_bounded_loops": 56
+            }
+        ]
+    }
+}

@@ -1,0 +1,35 @@
+# 2026-09-25 21:27:48 UTC  |  host  |  <repo>
+$ forge script script/DemoAgg.s.sol --sig enroll() --rpc-url http://127.0.0.1:8545 --broadcast --slow --unlocked --sender 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+
+No files changed, compilation skipped
+Script ran successfully.
+
+== Logs ==
+  enrolled at slot 0
+  enrollment root now 2176375649697964384887914339335574820310430501367332019340265533605369905358
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 31337
+
+Estimated gas price: 0.262481209 gwei
+
+Estimated total gas used for script: 450295
+
+Estimated amount required: 0.000118193976006655 ETH
+
+==========================
+
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+
+Transactions saved to: <repo>/broadcast\DemoAgg.s.sol\31337\enroll-latest.json
+
+Sensitive values saved to: <repo>/cache\DemoAgg.s.sol\31337\enroll-latest.json
+
+
+# exit code: 0

@@ -1,0 +1,34 @@
+# 2026-09-25 23:10:10 UTC  |  host  |  <repo>
+$ forge script script/DemoAttacks.s.sol --sig createVault() --rpc-url https://ethereum-sepolia-rpc.publicnode.com --broadcast --slow
+
+No files changed, compilation skipped
+Script ran successfully.
+
+== Logs ==
+  attack vault: 0x9ae1259E4B77292901a99D56056DAf1E1Fadd226
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 11155111
+
+Estimated gas price: 2.099121974 gwei
+
+Estimated total gas used for script: 248066
+
+Estimated amount required: 0.000520720791602284 ETH
+
+==========================
+
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+
+Transactions saved to: <repo>/broadcast\DemoAttacks.s.sol\11155111\createVault-latest.json
+
+Sensitive values saved to: <repo>/cache\DemoAttacks.s.sol\11155111\createVault-latest.json
+
+
+# exit code: 0

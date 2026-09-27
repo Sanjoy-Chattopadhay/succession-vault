@@ -1,0 +1,24 @@
+{
+    "exitcode": 0,
+    "test_results": {
+        "test/halmos/VaultSymbolic.t.sol:RegistrySymbolic": [
+            {
+                "name": "check_R_epochsOnlyByAggregatorAndWellFormed(uint64,uint64,uint256)",
+                "exitcode": 0,
+                "num_models": 0,
+                "models": [],
+                "num_paths": [
+                    37,
+                    35,
+                    0
+                ],
+                "time": [
+                    0.5023914000194054,
+                    0.5023723999911454,
+                    1.5600002370774746e-05
+                ],
+                "num_bounded_loops": 0
+            }
+        ]
+    }
+}

@@ -1,0 +1,39 @@
+# 2026-09-25 21:28:42 UTC  |  host  |  <repo>
+$ node js/demo.mjs report --rpc http://127.0.0.1:8545
+
+┌─────────┬────────────────────────────────┬─────────┬────────┬───────────────────┐
+│ (index) │ function                       │ gasUsed │ status │ hash              │
+├─────────┼────────────────────────────────┼─────────┼────────┼───────────────────┤
+│ 0       │ 'deploy LivenessVerifier'      │ 355510  │ 'ok'   │ '0x39a9e3afb6b8…' │
+│ 1       │ 'deploy AgeVerifier'           │ 355498  │ 'ok'   │ '0x7c25aa847696…' │
+│ 2       │ 'deploy EnrollVerifier'        │ 398015  │ 'ok'   │ '0xf68e0432e8af…' │
+│ 3       │ 'deploy AggVerifier_N8_m40_w1' │ 416832  │ 'ok'   │ '0x3f61c2573507…' │
+│ 4       │ 'deploy LivenessRegistry'      │ 1294550 │ 'ok'   │ '0xb6c3b51159fc…' │
+│ 5       │ 'deploy BequestVault'          │ 4236570 │ 'ok'   │ '0x6aa872cb2171…' │
+│ 6       │ 'deploy BequestFactory'        │ 324581  │ 'ok'   │ '0x3190cf8e61d5…' │
+│ 7       │ 'deploy TestUSD'               │ 740826  │ 'ok'   │ '0x6c94af5d7ef5…' │
+│ 8       │ 'deploy HeirloomNFT'           │ 1230936 │ 'ok'   │ '0x130e65e41a61…' │
+│ 9       │ 'deploy FamilyCollectibles'    │ 1446195 │ 'ok'   │ '0x23eba3101b0b…' │
+│ 10      │ 'createVault'                  │ 169630  │ 'ok'   │ '0x0e828c1c0ae3…' │
+│ 11      │ 'transfer ETH'                 │ 23712   │ 'ok'   │ '0x41aae1ac58c5…' │
+│ 12      │ 'mint'                         │ 70526   │ 'ok'   │ '0x220f77f6ebc0…' │
+│ 13      │ 'mint'                         │ 70934   │ 'ok'   │ '0xaff3e851c967…' │
+│ 14      │ 'mint'                         │ 56729   │ 'ok'   │ '0xec670b272014…' │
+│ 15      │ 'heartbeat'                    │ 30049   │ 'ok'   │ '0x6a5a2e2ac4d5…' │
+│ 16      │ 'enrollInRegistry'             │ 326006  │ 'ok'   │ '0x9f9ad2d95ea2…' │
+│ 17      │ 'submitEpoch'                  │ 318578  │ 'ok'   │ '0xcd6bd8035618…' │
+│ 18      │ 'proveLife'                    │ 237400  │ 'ok'   │ '0xc8d620df313e…' │
+│ 19      │ 'withdraw'                     │ 55234   │ 'ok'   │ '0xdf4c34ff0158…' │
+│ 20      │ 'setBinding'                   │ 68502   │ 'ok'   │ '0x78772c56f1dc…' │
+│ 21      │ 'claim'                        │ 143923  │ 'ok'   │ '0x2a984bcd9360…' │
+│ 22      │ 'claim'                        │ 85740   │ 'ok'   │ '0xb4ce2f4155cf…' │
+│ 23      │ 'claim'                        │ 102402  │ 'ok'   │ '0x4ca9082a96fe…' │
+│ 24      │ 'claimWithAgeProof'            │ 291934  │ 'ok'   │ '0x127bd3d0efd1…' │
+│ 25      │ 'claim'                        │ 80173   │ 'ok'   │ '0x23728f0f6c93…' │
+│ 26      │ 'claim'                        │ 102491  │ 'ok'   │ '0x6eca98826bce…' │
+│ 27      │ 'claim'                        │ 60776   │ 'ok'   │ '0x9b935911a97f…' │
+│ 28      │ 'sweep'                        │ 53960   │ 'ok'   │ '0xc16f12aa7c14…' │
+│ 29      │ 'sweep'                        │ 80422   │ 'ok'   │ '0x320e953eeebc…' │
+└─────────┴────────────────────────────────┴─────────┴────────┴───────────────────┘
+
+# exit code: 0

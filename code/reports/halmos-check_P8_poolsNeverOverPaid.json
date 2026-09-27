@@ -1,0 +1,24 @@
+{
+    "exitcode": 1,
+    "test_results": {
+        "test/halmos/VaultSymbolic.t.sol:VaultSymbolic": [
+            {
+                "name": "check_P8_poolsNeverOverPaid(bytes32)",
+                "exitcode": 5,
+                "num_models": 0,
+                "models": [],
+                "num_paths": [
+                    141647,
+                    94870,
+                    0
+                ],
+                "time": [
+                    121278.17564940001,
+                    121277.0218716,
+                    1.1537658000015654
+                ],
+                "num_bounded_loops": 281
+            }
+        ]
+    }
+}

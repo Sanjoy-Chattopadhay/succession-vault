@@ -1,0 +1,40 @@
+# 2026-09-25 21:27:13 UTC  |  host  |  <repo>
+$ forge script script/Demo.s.sol --sig create() --rpc-url http://127.0.0.1:8545 --broadcast --slow --unlocked --sender 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+
+No files changed, compilation skipped
+Script ran successfully.
+
+== Logs ==
+  vault: 0x9Fd21c5c6B260579B224e26C253D7baD4B4A23E1
+  status:         Alive
+  now:            1790371626
+  deadline:       1790372226
+  claimable at:   1790372526
+  last heartbeat: 1790371626
+  last life proof: 1790371626 (creation)
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 31337
+
+Estimated gas price: 0.656686573 gwei
+
+Estimated total gas used for script: 545407
+
+Estimated amount required: 0.000358161453720211 ETH
+
+==========================
+
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+
+Transactions saved to: <repo>/broadcast\Demo.s.sol\31337\create-latest.json
+
+Sensitive values saved to: <repo>/cache\Demo.s.sol\31337\create-latest.json
+
+
+# exit code: 0

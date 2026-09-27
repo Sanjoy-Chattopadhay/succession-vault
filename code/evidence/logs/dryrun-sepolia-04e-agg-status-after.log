@@ -1,0 +1,26 @@
+# 2026-09-25 21:27:57 UTC  |  host  |  <repo>
+$ forge script script/DemoAgg.s.sol --sig status() --rpc-url http://127.0.0.1:8545 --unlocked --sender 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+
+No files changed, compilation skipped
+Script ran successfully.
+
+== Logs ==
+  vault             0x9Fd21c5c6B260579B224e26C253D7baD4B4A23E1
+  registry          0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9
+  enrolled          true
+  slot              0
+  epochs recorded   1
+  registry binding  11788426182423669702712855521363674052140985076699069444226572518225147980014
+  present since     1790371638
+  -- local lastLifeProof (this vault's own transactions) --
+  local tL          1790371637
+  -- from the registry, with no transaction by this vault --
+  registry tL       1790371638
+  -- the two combined, which is what the lifecycle uses --
+  effective tL      1790371638
+  life proven       true
+  block timestamp   1790371973
+  deadline          1790372240
+  claimable at      1790372540
+
+# exit code: 0

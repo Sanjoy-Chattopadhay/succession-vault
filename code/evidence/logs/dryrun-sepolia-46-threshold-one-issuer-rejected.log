@@ -1,0 +1,15 @@
+# 2026-09-25 21:42:36 UTC  |  host  |  <repo>
+$ forge script script/DemoThreshold.s.sol --sig tryAlone() --rpc-url http://127.0.0.1:8545 --unlocked --sender 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+
+No files changed, compilation skipped
+Script ran successfully.
+
+== Logs ==
+  ALONE_SINGLE rejected ThresholdNotMet
+  ALONE_MULTI rejected ThresholdNotMet
+  THR_STATUS Alive
+  THR_NOW 1790375538
+  THR_TL 1790375477
+  THR_DEADLINE 1790376077
+
+# exit code: 0

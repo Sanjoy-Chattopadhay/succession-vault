@@ -1,0 +1,14 @@
+node_modules/
+fixtures/private/
+zk/ptau/
+zk/build/**/*.wtns
+out/
+cache/
+.env
+evidence/private/
+zk/plonk/*.zkey
+
+# prototype build output
+experiments/*/out
+experiments/*/cache
+zk/variants/*/*.zkey

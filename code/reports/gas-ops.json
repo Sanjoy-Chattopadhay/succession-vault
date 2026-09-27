@@ -1,0 +1,19 @@
+{
+  "claimERC1155": 101686,
+  "claimERC20": 85271,
+  "claimERC20_firstOfPool": 101620,
+  "claimERC721": 79914,
+  "claimETH": 85188,
+  "claimETH_first": 125944,
+  "claimWithAgeProof": 291560,
+  "createVault": 168899,
+  "depositERC20_transfer": 34371,
+  "depositETH": 23712,
+  "heartbeat": 30049,
+  "proveLife": 237400,
+  "setAllocationRoot": 30535,
+  "sweepERC20": 62849,
+  "sweepETH": 68281,
+  "unit": "transaction gas (forge --isolate)",
+  "withdrawETH": 37855
+}

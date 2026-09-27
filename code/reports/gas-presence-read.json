@@ -1,0 +1,7 @@
+{
+  "bestCaseGas": 20359,
+  "gasPerScannedEpoch": 2379,
+  "generatedBy": "forge test --match-contract RegistryGas --isolate",
+  "lookbackEpochs": 64,
+  "worstCaseGas": 170261
+}

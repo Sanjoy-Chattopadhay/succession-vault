@@ -1,0 +1,66 @@
+# 2026-09-18 09:06:52 UTC  |  host  |  <repo>
+$ powershell -NoProfile -ExecutionPolicy Bypass -File scripts/unthrottled.ps1 C:\Program Files\nodejs\node.exe js/bench-proving.mjs 20
+
+{
+  "machine": {
+    "cpu": "13th Gen Intel(R) Core(TM) i5-13450HX",
+    "cores": 16,
+    "memGB": 24,
+    "node": "v22.14.0",
+    "platform": "Windows_NT 10.0.26200"
+  },
+  "runs": 20,
+  "proofBytes": 256,
+  "liveness": {
+    "constraints": 16253,
+    "publicSignals": 2,
+    "witnessMs": {
+      "mean": 101.4,
+      "sd": 5.8,
+      "median": 101.2,
+      "min": 93.8,
+      "max": 111.8
+    },
+    "proveMs": {
+      "mean": 439.1,
+      "sd": 9.1,
+      "median": 439.1,
+      "min": 422.2,
+      "max": 455.9
+    },
+    "verifyMs": {
+      "mean": 9.2,
+      "sd": 2.9,
+      "median": 8.4,
+      "min": 6.2,
+      "max": 17
+    }
+  },
+  "age": {
+    "constraints": 336,
+    "publicSignals": 2,
+    "witnessMs": {
+      "mean": 27.7,
+      "sd": 0.8,
+      "median": 27.5,
+      "min": 26.4,
+      "max": 29.3
+    },
+    "proveMs": {
+      "mean": 38.7,
+      "sd": 1.9,
+      "median": 38.8,
+      "min": 35.2,
+      "max": 41.8
+    },
+    "verifyMs": {
+      "mean": 7.3,
+      "sd": 0.6,
+      "median": 7.2,
+      "min": 6.6,
+      "max": 8.7
+    }
+  }
+}
+
+# exit code: 0

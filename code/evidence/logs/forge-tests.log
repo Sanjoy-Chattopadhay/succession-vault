@@ -1,0 +1,258 @@
+No files changed, compilation skipped
+
+Ran 1 test for test/ProofSystems.t.sol:ProofSystems
+[PASS] test_VerificationGasPerProofSystem() (gas: 8254631)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 29.29ms (26.72ms CPU time)
+
+Ran 1 test for test/BoundSweep.t.sol:BoundSweep
+[PASS] test_BoundSweep() (gas: 4084084)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 62.86ms (55.77ms CPU time)
+
+Ran 24 tests for test/Registry.t.sol:RegistryTest
+[PASS] test_CensoredPrincipalStillHasTheDirectPath() (gas: 60251259)
+[PASS] test_EmptyEpochsCannotHideAPresenceThatStillMatters() (gas: 57303679)
+[PASS] test_EnrollAssignsSequentialSlots() (gas: 43646037)
+[PASS] test_EnrollNotByNonOwner() (gas: 7634391)
+[PASS] test_EnrollOnlyOncePerPrincipal() (gas: 45241284)
+[PASS] test_EnrollRejectsForgedRoot() (gas: 7864310)
+[PASS] test_EnrollRejectsUnregisteredBinding() (gas: 7639684)
+[PASS] test_EpochAuthorizesOwnerActions() (gas: 52601872)
+[PASS] test_EpochExtendsEveryVaultDeadlineWithNoVaultTransaction() (gas: 52665611)
+[PASS] test_EpochRejectsForgedBitmap() (gas: 45917690)
+[PASS] test_EpochRejectsFutureEnd() (gas: 45694884)
+[PASS] test_EpochRejectsOverlappingEpochs() (gas: 52563677)
+[PASS] test_EpochRejectsWrongWordCount() (gas: 45696999)
+[PASS] test_EpochShorterThanTheMinimumIsRejected() (gas: 45694866)
+[PASS] test_OnlyTheAggregatorSubmitsEpochs() (gas: 45696312)
+[PASS] test_OwnerActionsExpireAfterAuthWindow() (gas: 52566985)
+[PASS] test_PresenceOfStranger() (gas: 12051)
+[PASS] test_PresenceReportsEpochStart() (gas: 53023237)
+[PASS] test_SilentPrincipalKeepsOnlyTheOlderEpoch() (gas: 67578762)
+[PASS] test_SubmitEpochRecordsEveryone() (gas: 45997073)
+[PASS] test_SyncFromRegistryCachesPresence() (gas: 52575517)
+[PASS] test_VaultIgnoresPresenceForAForeignBinding() (gas: 53033357)
+[PASS] test_VaultRejectsTimersBeyondTheRegistrySpan() (gas: 53237039)
+[PASS] test_VaultWithoutRegistryIsUnaffected() (gas: 4565824)
+Suite result: ok. 24 passed; 0 failed; 0 skipped; finished in 241.52ms (1.93s CPU time)
+
+Ran 4 tests for test/Gas.t.sol:GasBenchmark
+[PASS] test_GasPerOperation() (gas: 2397282)
+[PASS] test_GasScalingWithHeirs() (gas: 2961095)
+[PASS] test_GasThreshold() (gas: 1038613)
+[PASS] test_GasVerifiersOnly() (gas: 921773)
+Suite result: ok. 4 passed; 0 failed; 0 skipped; finished in 243.98ms (487.87ms CPU time)
+
+Ran 1 test for test/Comparison.t.sol:Comparison
+[PASS] test_CompareLifecycleGas() (gas: 103934560)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 339.48ms (333.59ms CPU time)
+
+Ran 3 tests for test/RegistryGas.t.sol:RegistryGas
+[PASS] test_EpochGas() (gas: 1163194112)
+[PASS] test_PerPrincipalFloor() (gas: 67293284)
+[PASS] test_PresenceReadCost() (gas: 112323095)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 4.79s (834.89ms CPU time)
+
+Ran 9 tests for test/Threshold.t.sol:ThresholdTest
+[PASS] test_Threshold_Configured() (gas: 22657)
+[PASS] test_Threshold_DuplicateIssuerRejected() (gas: 551109)
+[PASS] test_Threshold_EveryProofChecked() (gas: 93895561453)
+[PASS] test_Threshold_KeyHolderPlusOneIssuerStillBounded() (gas: 1047809)
+[PASS] test_Threshold_OneIssuerAloneRejected() (gas: 358334)
+[PASS] test_Threshold_OneIssuerOutageTolerated() (gas: 835978)
+[PASS] test_Threshold_RecordsEarliestTime() (gas: 836561)
+[PASS] test_Threshold_RemovingAnIssuerNeedsTheThreshold() (gas: 1016842)
+[PASS] test_Threshold_TwoOfThreeAccepted() (gas: 842089)
+Suite result: ok. 9 passed; 0 failed; 0 skipped; finished in 4.89s (51.98ms CPU time)
+
+Ran 6 tests for test/Invariant.t.sol:InvariantTest
+[PASS] invariant_DeadlineBoundedByLastProofOfLife() (runs: 128, calls: 8192, reverts: 0)
+
+╭--------------+---------------+-------+---------+----------╮
+| Contract     | Selector      | Calls | Reverts | Discards |
++===========================================================+
+| VaultHandler | addBequest    | 892   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | addLifeProof  | 904   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | claim         | 908   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | heartbeat     | 897   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | ownerWithdraw | 890   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | proveLife     | 895   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | sweep         | 943   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | thiefActs     | 930   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | warp          | 933   | 0       | 0        |
+╰--------------+---------------+-------+---------+----------╯
+
+[PASS] invariant_EthConserved() (runs: 128, calls: 8192, reverts: 0)
+
+╭--------------+---------------+-------+---------+----------╮
+| Contract     | Selector      | Calls | Reverts | Discards |
++===========================================================+
+| VaultHandler | addBequest    | 892   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | addLifeProof  | 904   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | claim         | 908   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | heartbeat     | 897   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | ownerWithdraw | 890   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | proveLife     | 895   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | sweep         | 943   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | thiefActs     | 930   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | warp          | 933   | 0       | 0        |
+╰--------------+---------------+-------+---------+----------╯
+
+[PASS] invariant_NoClaimBeforeDeadlinePlusGrace() (runs: 128, calls: 8192, reverts: 0)
+
+╭--------------+---------------+-------+---------+----------╮
+| Contract     | Selector      | Calls | Reverts | Discards |
++===========================================================+
+| VaultHandler | addBequest    | 892   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | addLifeProof  | 904   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | claim         | 908   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | heartbeat     | 897   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | ownerWithdraw | 890   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | proveLife     | 895   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | sweep         | 943   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | thiefActs     | 930   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | warp          | 933   | 0       | 0        |
+╰--------------+---------------+-------+---------+----------╯
+
+[PASS] invariant_NoUnauthorizedOwnerActions() (runs: 128, calls: 8192, reverts: 0)
+
+╭--------------+---------------+-------+---------+----------╮
+| Contract     | Selector      | Calls | Reverts | Discards |
++===========================================================+
+| VaultHandler | addBequest    | 892   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | addLifeProof  | 904   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | claim         | 908   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | heartbeat     | 897   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | ownerWithdraw | 890   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | proveLife     | 895   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | sweep         | 943   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | thiefActs     | 930   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | warp          | 933   | 0       | 0        |
+╰--------------+---------------+-------+---------+----------╯
+
+[PASS] invariant_PoolsNeverOverPaid() (runs: 128, calls: 8192, reverts: 0)
+
+╭--------------+---------------+-------+---------+----------╮
+| Contract     | Selector      | Calls | Reverts | Discards |
++===========================================================+
+| VaultHandler | addBequest    | 892   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | addLifeProof  | 904   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | claim         | 908   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | heartbeat     | 897   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | ownerWithdraw | 890   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | proveLife     | 895   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | sweep         | 943   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | thiefActs     | 930   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | warp          | 933   | 0       | 0        |
+╰--------------+---------------+-------+---------+----------╯
+
+[PASS] invariant_TokensConserved() (runs: 128, calls: 8192, reverts: 0)
+
+╭--------------+---------------+-------+---------+----------╮
+| Contract     | Selector      | Calls | Reverts | Discards |
++===========================================================+
+| VaultHandler | addBequest    | 892   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | addLifeProof  | 904   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | claim         | 908   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | heartbeat     | 897   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | ownerWithdraw | 890   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | proveLife     | 895   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | sweep         | 943   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | thiefActs     | 930   | 0       | 0        |
+|--------------+---------------+-------+---------+----------|
+| VaultHandler | warp          | 933   | 0       | 0        |
+╰--------------+---------------+-------+---------+----------╯
+
+Suite result: ok. 6 passed; 0 failed; 0 skipped; finished in 4.89s (28.32s CPU time)
+
+Ran 41 tests for test/BequestVault.t.sol:BequestVaultTest
+[PASS] testFuzz_AgeCutoff_ValidCalendarDate(uint40) (runs: 1000, μ: 13542, ~: 11783)
+[PASS] test_AgeCutoff_KnownDates() (gas: 31030)
+[PASS] test_CannotReinitialize() (gas: 31472)
+[PASS] test_ClaimManyWithAgeProof_ChecksAgeBeforePaying() (gas: 917366)
+[PASS] test_ClaimManyWithAgeProof_RejectsMixedCommitments() (gas: 659082)
+[PASS] test_ClaimMany_OneTransactionPerHeir() (gas: 652765)
+[PASS] test_ClaimMany_RejectsAgeGatedLeafAndLengthMismatch() (gas: 587117)
+[PASS] test_Claim_AgeProofBoundToLeafCommitment() (gas: 808490)
+[PASS] test_Claim_AgeProofWithTooLateCutoffRejected() (gas: 609336)
+[PASS] test_Claim_DoubleClaimReverts() (gas: 583120)
+[PASS] test_Claim_Erc721AndErc1155() (gas: 631662)
+[PASS] test_Claim_EthProRataAndTranche() (gas: 699112)
+[PASS] test_Claim_ForgedLeafReverts() (gas: 505502)
+[PASS] test_Claim_OverAllocationRejected() (gas: 198162)
+[PASS] test_Claim_RevertsWhileAliveOrGrace() (gas: 449128)
+[PASS] test_Claim_TokensWithAgeGates() (gas: 1093711)
+[PASS] test_CreateVault_RejectsBadConfig() (gas: 169194)
+[PASS] test_FirstClaimSettlesIrrevocably() (gas: 950802)
+[PASS] test_FullSuccessionAndSweep() (gas: 1111269)
+[PASS] test_Heartbeat_CappedByLifeProofInterval() (gas: 91681)
+[PASS] test_Heartbeat_ExtendsDeadline() (gas: 23959)
+[PASS] test_Heartbeat_OnlyOwner() (gas: 15640)
+[PASS] test_Heartbeat_RevivesDuringGrace() (gas: 27018)
+[PASS] test_InitialState() (gas: 42678)
+[PASS] test_KeyThief_CanOnlyDelaySuccessionBoundedly() (gas: 1248148)
+[PASS] test_OwnerActions_RejectNonOwnerEvenWithFreshProof() (gas: 560615)
+[PASS] test_ProofOfLifeRevivesClaimableVaultBeforeFirstClaim() (gas: 1060695)
+[PASS] test_ProveLife_AnyoneCanSubmit() (gas: 564431)
+[PASS] test_ProveLife_RejectsCredentialOlderThanVault() (gas: 497732)
+[PASS] test_ProveLife_RejectsFutureTimestamp() (gas: 563125)
+[PASS] test_ProveLife_RejectsOlderThanLast() (gas: 635678)
+[PASS] test_ProveLife_RejectsProofBoundToAnotherIssuer() (gas: 862933)
+[PASS] test_ProveLife_RejectsReplay() (gas: 635661)
+[PASS] test_ProveLife_RejectsTamperedSignals() (gas: 93894979323)
+[PASS] test_ProveLife_RejectsUnregisteredIssuer() (gas: 349121)
+[PASS] test_ProveLife_SecondIssuerAfterRegistration() (gas: 665700)
+[PASS] test_RealBillionsCredential() (gas: 379205)
+[PASS] test_SetTimers_Validation() (gas: 575391)
+[PASS] test_StatusIsPureFunctionOfTime() (gas: 26736)
+[PASS] test_Withdraw_AllAssetKinds() (gas: 684559)
+[PASS] test_Withdraw_NeedsFreshProofOfLife() (gas: 682806)
+Suite result: ok. 41 passed; 0 failed; 0 skipped; finished in 4.90s (4.72s CPU time)
+
+Ran 9 test suites in 4.90s (20.39s CPU time): 90 tests passed, 0 failed, 0 skipped (90 total tests)

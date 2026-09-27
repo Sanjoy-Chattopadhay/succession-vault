@@ -1,0 +1,36 @@
+# 2026-09-25 22:12:20 UTC  |  host  |  <repo>
+$ forge script script/Deploy.s.sol --rpc-url https://ethereum-sepolia-rpc.publicnode.com --broadcast --slow
+
+No files changed, compilation skipped
+Script ran successfully.
+
+== Logs ==
+  factory:  0x03D47801F56f59BBec12D04d3157002538eb2BCa
+  registry: 0x010481ad036E1B4Ee0C8B12d0F46847bF23f484b
+  written:  deployments/11155111.json
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 11155111
+
+Estimated gas price: 1.898918376 gwei
+
+Estimated total gas used for script: 14039378
+
+Estimated amount required: 0.026659632871810128 ETH
+
+==========================
+
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+
+Transactions saved to: <repo>/broadcast\Deploy.s.sol\11155111\run-latest.json
+
+Sensitive values saved to: <repo>/cache\Deploy.s.sol\11155111\run-latest.json
+
+
+# exit code: 0

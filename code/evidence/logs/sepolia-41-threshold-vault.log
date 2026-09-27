@@ -1,0 +1,34 @@
+# 2026-09-25 23:23:46 UTC  |  host  |  <repo>
+$ forge script script/DemoThreshold.s.sol --sig create() --rpc-url https://ethereum-sepolia-rpc.publicnode.com --broadcast --slow
+
+No files changed, compilation skipped
+Script ran successfully.
+
+== Logs ==
+  threshold vault: 0x903fF1Ae433603a86861d647E0bC31A41dE20f19
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 11155111
+
+Estimated gas price: 2.107398324 gwei
+
+Estimated total gas used for script: 234267
+
+Estimated amount required: 0.000493693883168508 ETH
+
+==========================
+
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+
+Transactions saved to: <repo>/broadcast\DemoThreshold.s.sol\11155111\create-latest.json
+
+Sensitive values saved to: <repo>/cache\DemoThreshold.s.sol\11155111\create-latest.json
+
+
+# exit code: 0

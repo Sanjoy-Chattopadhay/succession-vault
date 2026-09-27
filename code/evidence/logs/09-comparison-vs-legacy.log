@@ -1,0 +1,31 @@
+# 2026-09-18 10:15:24 UTC  |  host  |  <repo>
+$ forge test --match-contract Comparison --isolate -vv
+
+Compiling 1 files with Solc 0.8.28
+Solc 0.8.28 finished in 2.61s
+Compiler run successful!
+
+Ran 1 test for test/Comparison.t.sol:Comparison
+[PASS] test_CompareLifecycleGas() (gas: 126617903)
+Logs:
+  n=1 bequest total: 714648
+  n=1 bequest (no age gates) total: 501286
+  n=1 legacy  total: 1507497
+  n=2 bequest total: 1037431
+  n=2 bequest (no age gates) total: 613861
+  n=2 legacy  total: 1997218
+  n=4 bequest total: 1685774
+  n=4 bequest (no age gates) total: 842052
+  n=4 legacy  total: 2976660
+  n=8 bequest total: 2989193
+  n=8 bequest (no age gates) total: 1304476
+  n=8 legacy  total: 4935544
+  n=16 bequest total: 5607574
+  n=16 bequest (no age gates) total: 2241749
+  n=16 legacy  total: 8912457
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 766.36ms (746.19ms CPU time)
+
+Ran 1 test suite in 770.96ms (766.36ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+
+# exit code: 0

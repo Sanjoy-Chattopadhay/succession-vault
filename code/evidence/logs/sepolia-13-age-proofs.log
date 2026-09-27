@@ -1,0 +1,7 @@
+# 2026-09-25 22:39:00 UTC  |  host  |  <repo>
+$ node js/demo.mjs ages
+
+bequest 4: age proof ok (372 ms)
+bequest 5: heir not yet 18, no proof
+
+# exit code: 0

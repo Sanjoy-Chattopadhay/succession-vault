@@ -1,0 +1,34 @@
+# 2026-09-25 21:28:51 UTC  |  host  |  <repo>
+$ forge script script/DemoAttacks.s.sol --sig createVault() --rpc-url http://127.0.0.1:8545 --broadcast --slow --unlocked --sender 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+
+No files changed, compilation skipped
+Script ran successfully.
+
+== Logs ==
+  attack vault: 0xbd2284C7AaD135D2d1D276C516983299C8349770
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 31337
+
+Estimated gas price: 0.027618355 gwei
+
+Estimated total gas used for script: 234300
+
+Estimated amount required: 0.0000064709805765 ETH
+
+==========================
+
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+
+Transactions saved to: <repo>/broadcast\DemoAttacks.s.sol\31337\createVault-latest.json
+
+Sensitive values saved to: <repo>/cache\DemoAttacks.s.sol\31337\createVault-latest.json
+
+
+# exit code: 0

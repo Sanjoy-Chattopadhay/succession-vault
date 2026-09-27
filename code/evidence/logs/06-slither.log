@@ -1,0 +1,220 @@
+# 2026-09-18 10:27:08 UTC  |  host  |  <repo>
+$ slither . --filter-paths lib/|node_modules/|test/|script/ --json reports/slither.json
+
+'forge clean' running (wd: <repo>)
+'forge config --json' running
+'forge build --build-info --deny never --skip ./test/** ./script/** --force' running (wd: <repo>)
+
+Detector: incorrect-return
+AgeVerifier.verifyProof(uint256[2],uint256[2][2],uint256[2],uint256[2]) (src/verifiers/AgeVerifier.sol#62-174) calls AgeVerifier.verifyProof.asm_0.checkField() (src/verifiers/AgeVerifier.sol#64-69) which halt the execution return(uint256,uint256)(0,0x20) (src/verifiers/AgeVerifier.sol#67)
+AgeVerifier.verifyProof(uint256[2],uint256[2][2],uint256[2],uint256[2]) (src/verifiers/AgeVerifier.sol#62-174) calls AgeVerifier.verifyProof.asm_0.checkPairing() (src/verifiers/AgeVerifier.sol#97-156) which halt the execution return(uint256,uint256)(0,0x20) (src/verifiers/AgeVerifier.sol#83)
+AgeVerifier.verifyProof.asm_0.checkPairing() (src/verifiers/AgeVerifier.sol#97-156) calls AgeVerifier.verifyProof.asm_0.g1_mulAccC() (src/verifiers/AgeVerifier.sol#72-95) which halt the execution return(uint256,uint256)(0,0x20) (src/verifiers/AgeVerifier.sol#93)
+LivenessVerifier.verifyProof(uint256[2],uint256[2][2],uint256[2],uint256[2]) (src/verifiers/LivenessVerifier.sol#62-174) calls LivenessVerifier.verifyProof.asm_0.checkField() (src/verifiers/LivenessVerifier.sol#64-69) which halt the execution return(uint256,uint256)(0,0x20) (src/verifiers/LivenessVerifier.sol#67)
+LivenessVerifier.verifyProof(uint256[2],uint256[2][2],uint256[2],uint256[2]) (src/verifiers/LivenessVerifier.sol#62-174) calls LivenessVerifier.verifyProof.asm_0.checkPairing() (src/verifiers/LivenessVerifier.sol#97-156) which halt the execution return(uint256,uint256)(0,0x20) (src/verifiers/LivenessVerifier.sol#93)
+LivenessVerifier.verifyProof.asm_0.checkPairing() (src/verifiers/LivenessVerifier.sol#97-156) calls LivenessVerifier.verifyProof.asm_0.g1_mulAccC() (src/verifiers/LivenessVerifier.sol#72-95) which halt the execution return(uint256,uint256)(0,0x20) (src/verifiers/LivenessVerifier.sol#93)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-return-in-assembly
+
+Detector: divide-before-multiply
+BequestVault._civilFromDays(uint256) (src/BequestVault.sol#444-453) performs a multiplication on the result of a division:
+	- era = z / 146_097 (src/BequestVault.sol#449)
+	- doe = z - era * 146_097 (src/BequestVault.sol#449)
+BequestVault._civilFromDays(uint256) (src/BequestVault.sol#444-453) performs a multiplication on the result of a division:
+	- yoe = (doe - doe / 1460 + doe / 36_524 - doe / 146_096) / 365 (src/BequestVault.sol#449-450)
+	- doy = doe - (365 * yoe + yoe / 4 - yoe / 100) (src/BequestVault.sol#450-451)
+BequestVault._civilFromDays(uint256) (src/BequestVault.sol#444-453) performs a multiplication on the result of a division:
+	- mp = (5 * doy + 2) / 153 (src/BequestVault.sol#451)
+	- d = doy - (153 * mp + 2) / 5 + 1 (src/BequestVault.sol#451-452)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#divide-before-multiply
+
+Detector: calls-loop
+BequestVault._claim(BequestVault.Bequest,bytes32[]) (src/BequestVault.sol#279-314) has external calls inside a loop: IERC721(b.token).transferFrom(address(this),b.heir,b.id) (src/BequestVault.sol#299-300)
+	Calls stack containing the loop:
+		BequestVault.claimMany(BequestVault.Bequest[],bytes32[][])
+BequestVault._balance(uint8,address,uint256) (src/BequestVault.sol#381-391) has external calls inside a loop: IERC20(token).balanceOf(address(this)) (src/BequestVault.sol#388-389)
+	Calls stack containing the loop:
+		BequestVault.claimMany(BequestVault.Bequest[],bytes32[][])
+		BequestVault._claim(BequestVault.Bequest,bytes32[])
+BequestVault._balance(uint8,address,uint256) (src/BequestVault.sol#381-391) has external calls inside a loop: IERC1155(token).balanceOf(address(this),id) (src/BequestVault.sol#389-390)
+	Calls stack containing the loop:
+		BequestVault.claimMany(BequestVault.Bequest[],bytes32[][])
+		BequestVault._claim(BequestVault.Bequest,bytes32[])
+BequestVault._transferOut(uint8,address,uint256,uint256,address) (src/BequestVault.sol#391-404) has external calls inside a loop: (ok,None) = to.call{value: amount}() (src/BequestVault.sol#395)
+	Calls stack containing the loop:
+		BequestVault.claimMany(BequestVault.Bequest[],bytes32[][])
+		BequestVault._claim(BequestVault.Bequest,bytes32[])
+BequestVault._transferOut(uint8,address,uint256,uint256,address) (src/BequestVault.sol#391-404) has external calls inside a loop: IERC721(token).transferFrom(address(this),to,id) (src/BequestVault.sol#398-401)
+	Calls stack containing the loop:
+		BequestVault.claimMany(BequestVault.Bequest[],bytes32[][])
+		BequestVault._claim(BequestVault.Bequest,bytes32[])
+BequestVault._transferOut(uint8,address,uint256,uint256,address) (src/BequestVault.sol#391-404) has external calls inside a loop: IERC1155(token).safeTransferFrom(address(this),to,id,amount,) (src/BequestVault.sol#401-403)
+	Calls stack containing the loop:
+		BequestVault.claimMany(BequestVault.Bequest[],bytes32[][])
+		BequestVault._claim(BequestVault.Bequest,bytes32[])
+BequestVault._claim(BequestVault.Bequest,bytes32[]) (src/BequestVault.sol#279-314) has external calls inside a loop: IERC721(b.token).transferFrom(address(this),b.heir,b.id) (src/BequestVault.sol#299-300)
+	Calls stack containing the loop:
+		BequestVault.claimManyWithAgeProof(BequestVault.Bequest[],bytes32[][],BequestVault.Proof,uint256)
+BequestVault._balance(uint8,address,uint256) (src/BequestVault.sol#381-391) has external calls inside a loop: IERC20(token).balanceOf(address(this)) (src/BequestVault.sol#388-389)
+	Calls stack containing the loop:
+		BequestVault.claimManyWithAgeProof(BequestVault.Bequest[],bytes32[][],BequestVault.Proof,uint256)
+		BequestVault._claim(BequestVault.Bequest,bytes32[])
+BequestVault._balance(uint8,address,uint256) (src/BequestVault.sol#381-391) has external calls inside a loop: IERC1155(token).balanceOf(address(this),id) (src/BequestVault.sol#389-390)
+	Calls stack containing the loop:
+		BequestVault.claimManyWithAgeProof(BequestVault.Bequest[],bytes32[][],BequestVault.Proof,uint256)
+		BequestVault._claim(BequestVault.Bequest,bytes32[])
+BequestVault._transferOut(uint8,address,uint256,uint256,address) (src/BequestVault.sol#391-404) has external calls inside a loop: (ok,None) = to.call{value: amount}() (src/BequestVault.sol#395)
+	Calls stack containing the loop:
+		BequestVault.claimManyWithAgeProof(BequestVault.Bequest[],bytes32[][],BequestVault.Proof,uint256)
+		BequestVault._claim(BequestVault.Bequest,bytes32[])
+BequestVault._transferOut(uint8,address,uint256,uint256,address) (src/BequestVault.sol#391-404) has external calls inside a loop: IERC721(token).transferFrom(address(this),to,id) (src/BequestVault.sol#398-401)
+	Calls stack containing the loop:
+		BequestVault.claimManyWithAgeProof(BequestVault.Bequest[],bytes32[][],BequestVault.Proof,uint256)
+		BequestVault._claim(BequestVault.Bequest,bytes32[])
+BequestVault._transferOut(uint8,address,uint256,uint256,address) (src/BequestVault.sol#391-404) has external calls inside a loop: IERC1155(token).safeTransferFrom(address(this),to,id,amount,) (src/BequestVault.sol#401-403)
+	Calls stack containing the loop:
+		BequestVault.claimManyWithAgeProof(BequestVault.Bequest[],bytes32[][],BequestVault.Proof,uint256)
+		BequestVault._claim(BequestVault.Bequest,bytes32[])
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation/#calls-inside-a-loop
+
+Detector: timestamp
+BequestVault.proveLife(BequestVault.Proof,uint256,uint256) (src/BequestVault.sol#175-186) uses timestamp for comparisons
+	Dangerous comparisons:
+	- livenessTime <= lastLifeProof || livenessTime > block.timestamp + MAX_CLOCK_SKEW (src/BequestVault.sol#178-180)
+	- livenessTime > lastHeartbeat (src/BequestVault.sol#183-185)
+BequestVault.claimWithAgeProof(BequestVault.Bequest,bytes32[],BequestVault.Proof,uint256) (src/BequestVault.sol#232-242) uses timestamp for comparisons
+	Dangerous comparisons:
+	- cutoff > ageCutoff(block.timestamp,b.minAge) (src/BequestVault.sol#237-238)
+BequestVault.claimManyWithAgeProof(BequestVault.Bequest[],bytes32[][],BequestVault.Proof,uint256) (src/BequestVault.sol#253-269) uses timestamp for comparisons
+	Dangerous comparisons:
+	- cutoff > ageCutoff(block.timestamp,bs[i].minAge) (src/BequestVault.sol#265)
+BequestVault.sweep(uint8,address,uint256) (src/BequestVault.sol#271-279) uses timestamp for comparisons
+	Dangerous comparisons:
+	- block.timestamp <= claimableAt() + claimWindow() (src/BequestVault.sol#272-273)
+BequestVault._claim(BequestVault.Bequest,bytes32[]) (src/BequestVault.sol#279-314) uses timestamp for comparisons
+	Dangerous comparisons:
+	- block.timestamp <= claimableAt() (src/BequestVault.sol#284-287)
+	- block.timestamp < b.notBefore (src/BequestVault.sol#288)
+BequestVault.deadline() (src/BequestVault.sol#315-322) uses timestamp for comparisons
+	Dangerous comparisons:
+	- byHeartbeat < byLifeProof (src/BequestVault.sol#319-322)
+BequestVault.status() (src/BequestVault.sol#338-347) uses timestamp for comparisons
+	Dangerous comparisons:
+	- block.timestamp <= d (src/BequestVault.sol#342-343)
+	- block.timestamp <= d + gracePeriod() (src/BequestVault.sol#343-346)
+BequestVault._civilFromDays(uint256) (src/BequestVault.sol#444-453) uses timestamp for comparisons
+	Dangerous comparisons:
+	- mp < 10 (src/BequestVault.sol#452-453)
+	- m <= 2 (src/BequestVault.sol#453)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#block-timestamp
+
+Detector: assembly
+AgeVerifier.verifyProof(uint256[2],uint256[2][2],uint256[2],uint256[2]) (src/verifiers/AgeVerifier.sol#62-174) uses assembly
+	- INLINE ASM (src/verifiers/AgeVerifier.sol#63-173)
+AgeVerifier.verifyProof.asm_0.checkField() (src/verifiers/AgeVerifier.sol#64-69) uses assembly
+	- INLINE ASM (src/verifiers/AgeVerifier.sol#64-69)
+AgeVerifier.verifyProof.asm_0.g1_mulAccC() (src/verifiers/AgeVerifier.sol#72-95) uses assembly
+	- INLINE ASM (src/verifiers/AgeVerifier.sol#72-95)
+AgeVerifier.verifyProof.asm_0.checkPairing() (src/verifiers/AgeVerifier.sol#97-156) uses assembly
+	- INLINE ASM (src/verifiers/AgeVerifier.sol#97-156)
+LivenessVerifier.verifyProof(uint256[2],uint256[2][2],uint256[2],uint256[2]) (src/verifiers/LivenessVerifier.sol#62-174) uses assembly
+	- INLINE ASM (src/verifiers/LivenessVerifier.sol#63-173)
+LivenessVerifier.verifyProof.asm_0.checkField() (src/verifiers/LivenessVerifier.sol#64-69) uses assembly
+	- INLINE ASM (src/verifiers/LivenessVerifier.sol#64-69)
+LivenessVerifier.verifyProof.asm_0.g1_mulAccC() (src/verifiers/LivenessVerifier.sol#72-95) uses assembly
+	- INLINE ASM (src/verifiers/LivenessVerifier.sol#72-95)
+LivenessVerifier.verifyProof.asm_0.checkPairing() (src/verifiers/LivenessVerifier.sol#97-156) uses assembly
+	- INLINE ASM (src/verifiers/LivenessVerifier.sol#97-156)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#assembly-usage
+
+Detector: costly-loop
+BequestVault._claim(BequestVault.Bequest,bytes32[]) (src/BequestVault.sol#279-314) has costly operations inside a loop:
+	- settled = true (src/BequestVault.sol#287)
+	Calls stack containing the loop:
+		BequestVault.claimMany(BequestVault.Bequest[],bytes32[][])
+BequestVault._claim(BequestVault.Bequest,bytes32[]) (src/BequestVault.sol#279-314) has costly operations inside a loop:
+	- settled = true (src/BequestVault.sol#287)
+	Calls stack containing the loop:
+		BequestVault.claimManyWithAgeProof(BequestVault.Bequest[],bytes32[][],BequestVault.Proof,uint256)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#costly-operations-inside-a-loop
+
+Detector: low-level-calls
+Low level call in BequestVault._transferOut(uint8,address,uint256,uint256,address) (src/BequestVault.sol#391-404):
+	- (ok,None) = to.call{value: amount}() (src/BequestVault.sol#395)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#low-level-calls
+
+Detector: missing-inheritance
+AgeVerifier (src/verifiers/AgeVerifier.sol#23-175) should inherit from IGroth16Verifier (src/interfaces/IGroth16Verifier.sol#5-12)
+LivenessVerifier (src/verifiers/LivenessVerifier.sol#23-175) should inherit from IGroth16Verifier (src/interfaces/IGroth16Verifier.sol#5-12)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#missing-inheritance
+
+Detector: naming-convention
+Variable BequestVault.LIVENESS_VERIFIER (src/BequestVault.sol#77-79) is not in mixedCase
+Variable BequestVault.AGE_VERIFIER (src/BequestVault.sol#79-82) is not in mixedCase
+Variable BequestVault.MIN_PERIOD (src/BequestVault.sol#84) is not in mixedCase
+Variable BequestVault.AUTH_WINDOW (src/BequestVault.sol#86) is not in mixedCase
+Parameter AgeVerifier.verifyProof(uint256[2],uint256[2][2],uint256[2],uint256[2])._pA (src/verifiers/AgeVerifier.sol#62) is not in mixedCase
+Parameter AgeVerifier.verifyProof(uint256[2],uint256[2][2],uint256[2],uint256[2])._pB (src/verifiers/AgeVerifier.sol#62) is not in mixedCase
+Parameter AgeVerifier.verifyProof(uint256[2],uint256[2][2],uint256[2],uint256[2])._pC (src/verifiers/AgeVerifier.sol#62) is not in mixedCase
+Parameter AgeVerifier.verifyProof(uint256[2],uint256[2][2],uint256[2],uint256[2])._pubSignals (src/verifiers/AgeVerifier.sol#62) is not in mixedCase
+Constant AgeVerifier.r (src/verifiers/AgeVerifier.sol#25) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant AgeVerifier.q (src/verifiers/AgeVerifier.sol#27) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant AgeVerifier.alphax (src/verifiers/AgeVerifier.sol#30) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant AgeVerifier.alphay (src/verifiers/AgeVerifier.sol#31) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant AgeVerifier.betax1 (src/verifiers/AgeVerifier.sol#32) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant AgeVerifier.betax2 (src/verifiers/AgeVerifier.sol#33) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant AgeVerifier.betay1 (src/verifiers/AgeVerifier.sol#34) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant AgeVerifier.betay2 (src/verifiers/AgeVerifier.sol#35) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant AgeVerifier.gammax1 (src/verifiers/AgeVerifier.sol#36) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant AgeVerifier.gammax2 (src/verifiers/AgeVerifier.sol#37) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant AgeVerifier.gammay1 (src/verifiers/AgeVerifier.sol#38) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant AgeVerifier.gammay2 (src/verifiers/AgeVerifier.sol#39) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant AgeVerifier.deltax1 (src/verifiers/AgeVerifier.sol#40) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant AgeVerifier.deltax2 (src/verifiers/AgeVerifier.sol#41) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant AgeVerifier.deltay1 (src/verifiers/AgeVerifier.sol#42) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant AgeVerifier.deltay2 (src/verifiers/AgeVerifier.sol#43) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant AgeVerifier.IC0x (src/verifiers/AgeVerifier.sol#46) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant AgeVerifier.IC0y (src/verifiers/AgeVerifier.sol#47) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant AgeVerifier.IC1x (src/verifiers/AgeVerifier.sol#49) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant AgeVerifier.IC1y (src/verifiers/AgeVerifier.sol#50) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant AgeVerifier.IC2x (src/verifiers/AgeVerifier.sol#52) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant AgeVerifier.IC2y (src/verifiers/AgeVerifier.sol#53) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant AgeVerifier.pVk (src/verifiers/AgeVerifier.sol#57) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant AgeVerifier.pPairing (src/verifiers/AgeVerifier.sol#58) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant AgeVerifier.pLastMem (src/verifiers/AgeVerifier.sol#60) is not in UPPER_CASE_WITH_UNDERSCORES
+Parameter LivenessVerifier.verifyProof(uint256[2],uint256[2][2],uint256[2],uint256[2])._pA (src/verifiers/LivenessVerifier.sol#62) is not in mixedCase
+Parameter LivenessVerifier.verifyProof(uint256[2],uint256[2][2],uint256[2],uint256[2])._pB (src/verifiers/LivenessVerifier.sol#62) is not in mixedCase
+Parameter LivenessVerifier.verifyProof(uint256[2],uint256[2][2],uint256[2],uint256[2])._pC (src/verifiers/LivenessVerifier.sol#62) is not in mixedCase
+Parameter LivenessVerifier.verifyProof(uint256[2],uint256[2][2],uint256[2],uint256[2])._pubSignals (src/verifiers/LivenessVerifier.sol#62) is not in mixedCase
+Constant LivenessVerifier.r (src/verifiers/LivenessVerifier.sol#25) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant LivenessVerifier.q (src/verifiers/LivenessVerifier.sol#27) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant LivenessVerifier.alphax (src/verifiers/LivenessVerifier.sol#30) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant LivenessVerifier.alphay (src/verifiers/LivenessVerifier.sol#31) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant LivenessVerifier.betax1 (src/verifiers/LivenessVerifier.sol#32) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant LivenessVerifier.betax2 (src/verifiers/LivenessVerifier.sol#33) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant LivenessVerifier.betay1 (src/verifiers/LivenessVerifier.sol#34) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant LivenessVerifier.betay2 (src/verifiers/LivenessVerifier.sol#35) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant LivenessVerifier.gammax1 (src/verifiers/LivenessVerifier.sol#36) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant LivenessVerifier.gammax2 (src/verifiers/LivenessVerifier.sol#37) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant LivenessVerifier.gammay1 (src/verifiers/LivenessVerifier.sol#38) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant LivenessVerifier.gammay2 (src/verifiers/LivenessVerifier.sol#39) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant LivenessVerifier.deltax1 (src/verifiers/LivenessVerifier.sol#40) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant LivenessVerifier.deltax2 (src/verifiers/LivenessVerifier.sol#41) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant LivenessVerifier.deltay1 (src/verifiers/LivenessVerifier.sol#42) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant LivenessVerifier.deltay2 (src/verifiers/LivenessVerifier.sol#43) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant LivenessVerifier.IC0x (src/verifiers/LivenessVerifier.sol#46) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant LivenessVerifier.IC0y (src/verifiers/LivenessVerifier.sol#47) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant LivenessVerifier.IC1x (src/verifiers/LivenessVerifier.sol#49) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant LivenessVerifier.IC1y (src/verifiers/LivenessVerifier.sol#50) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant LivenessVerifier.IC2x (src/verifiers/LivenessVerifier.sol#52) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant LivenessVerifier.IC2y (src/verifiers/LivenessVerifier.sol#53) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant LivenessVerifier.pVk (src/verifiers/LivenessVerifier.sol#57) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant LivenessVerifier.pPairing (src/verifiers/LivenessVerifier.sol#58) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant LivenessVerifier.pLastMem (src/verifiers/LivenessVerifier.sol#60) is not in UPPER_CASE_WITH_UNDERSCORES
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
+
+Detector: too-many-digits
+LivenessVerifier.slitherConstructorConstantVariables() (src/verifiers/LivenessVerifier.sol#23-175) uses literals with too many digits:
+	- IC0x = 6787484423743516499648420871817231832946820000028695905679331388952443560028 (src/verifiers/LivenessVerifier.sol#46)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#too-many-digits
+. analyzed (18 contracts with 102 detectors), 105 result(s) found
+
+# exit code: 127

@@ -1,0 +1,34 @@
+# 2026-09-25 23:08:46 UTC  |  host  |  <repo>
+$ forge script script/Demo.s.sol --sig sweep() --rpc-url https://ethereum-sepolia-rpc.publicnode.com --broadcast --slow
+
+No files changed, compilation skipped
+Script ran successfully.
+
+== Logs ==
+  swept residue to 0xE4f423c898F78CD4ab923BA6Fe872B5F55d022cf
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 11155111
+
+Estimated gas price: 2.234931924 gwei
+
+Estimated total gas used for script: 185613
+
+Estimated amount required: 0.000414832419209412 ETH
+
+==========================
+
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+
+Transactions saved to: <repo>/broadcast\Demo.s.sol\11155111\sweep-latest.json
+
+Sensitive values saved to: <repo>/cache\Demo.s.sol\11155111\sweep-latest.json
+
+
+# exit code: 0

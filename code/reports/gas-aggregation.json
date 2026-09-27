@@ -1,0 +1,137 @@
+{
+  "cohorts": {
+    "agg_N16_m16_w1": {
+      "cohortSize": 16,
+      "enrollGas": 325982,
+      "epochGasCold": 318542,
+      "epochGasPerCoveredSlot": 1225,
+      "epochGasPerProvenPrincipal": 19908,
+      "epochGasWarm": 303866,
+      "presenceWords": 1,
+      "publicSignals": 5,
+      "slotsCoveredByWords": 248,
+      "syncFromRegistryGas": 48298
+    },
+    "agg_N1_m16_w1": {
+      "cohortSize": 1,
+      "enrollGas": 326006,
+      "epochGasCold": 318566,
+      "epochGasPerCoveredSlot": 1144,
+      "epochGasPerProvenPrincipal": 318566,
+      "epochGasWarm": 283954,
+      "presenceWords": 1,
+      "publicSignals": 5,
+      "slotsCoveredByWords": 248,
+      "syncFromRegistryGas": 50749
+    },
+    "agg_N1_m16_w16": {
+      "cohortSize": 1,
+      "enrollGas": 325994,
+      "epochGasCold": 461887,
+      "epochGasPerCoveredSlot": 107,
+      "epochGasPerProvenPrincipal": 461887,
+      "epochGasWarm": 427263,
+      "presenceWords": 16,
+      "publicSignals": 20,
+      "slotsCoveredByWords": 3968,
+      "syncFromRegistryGas": 50749
+    },
+    "agg_N1_m16_w2": {
+      "cohortSize": 1,
+      "enrollGas": 326006,
+      "epochGasCold": 328109,
+      "epochGasPerCoveredSlot": 591,
+      "epochGasPerProvenPrincipal": 328109,
+      "epochGasWarm": 293473,
+      "presenceWords": 2,
+      "publicSignals": 6,
+      "slotsCoveredByWords": 496,
+      "syncFromRegistryGas": 50749
+    },
+    "agg_N1_m16_w32": {
+      "cohortSize": 1,
+      "enrollGas": 325994,
+      "epochGasCold": 614760,
+      "epochGasPerCoveredSlot": 73,
+      "epochGasPerProvenPrincipal": 614760,
+      "epochGasWarm": 580136,
+      "presenceWords": 32,
+      "publicSignals": 36,
+      "slotsCoveredByWords": 7936,
+      "syncFromRegistryGas": 50749
+    },
+    "agg_N1_m16_w4": {
+      "cohortSize": 1,
+      "enrollGas": 325994,
+      "epochGasCold": 347194,
+      "epochGasPerCoveredSlot": 315,
+      "epochGasPerProvenPrincipal": 347194,
+      "epochGasWarm": 312594,
+      "presenceWords": 4,
+      "publicSignals": 8,
+      "slotsCoveredByWords": 992,
+      "syncFromRegistryGas": 50749
+    },
+    "agg_N1_m16_w8": {
+      "cohortSize": 1,
+      "enrollGas": 326006,
+      "epochGasCold": 385437,
+      "epochGasPerCoveredSlot": 176,
+      "epochGasPerProvenPrincipal": 385437,
+      "epochGasWarm": 350825,
+      "presenceWords": 8,
+      "publicSignals": 12,
+      "slotsCoveredByWords": 1984,
+      "syncFromRegistryGas": 50749
+    },
+    "agg_N1_m40_w1": {
+      "cohortSize": 1,
+      "enrollGas": 326006,
+      "epochGasCold": 318566,
+      "epochGasPerCoveredSlot": 1144,
+      "epochGasPerProvenPrincipal": 318566,
+      "epochGasWarm": 283930,
+      "presenceWords": 1,
+      "publicSignals": 5,
+      "slotsCoveredByWords": 248,
+      "syncFromRegistryGas": 50749
+    },
+    "agg_N2_m40_w1": {
+      "cohortSize": 2,
+      "enrollGas": 326018,
+      "epochGasCold": 318566,
+      "epochGasPerCoveredSlot": 1225,
+      "epochGasPerProvenPrincipal": 159283,
+      "epochGasWarm": 303854,
+      "presenceWords": 1,
+      "publicSignals": 5,
+      "slotsCoveredByWords": 248,
+      "syncFromRegistryGas": 48298
+    },
+    "agg_N4_m40_w1": {
+      "cohortSize": 4,
+      "enrollGas": 326006,
+      "epochGasCold": 318566,
+      "epochGasPerCoveredSlot": 1225,
+      "epochGasPerProvenPrincipal": 79641,
+      "epochGasWarm": 303854,
+      "presenceWords": 1,
+      "publicSignals": 5,
+      "slotsCoveredByWords": 248,
+      "syncFromRegistryGas": 48298
+    },
+    "agg_N8_m40_w1": {
+      "cohortSize": 8,
+      "enrollGas": 325982,
+      "epochGasCold": 318542,
+      "epochGasPerCoveredSlot": 1225,
+      "epochGasPerProvenPrincipal": 39817,
+      "epochGasWarm": 303866,
+      "presenceWords": 1,
+      "publicSignals": 5,
+      "slotsCoveredByWords": 248,
+      "syncFromRegistryGas": 48298
+    }
+  },
+  "generatedBy": "forge test --match-contract RegistryGas --isolate"
+}

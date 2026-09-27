@@ -1,0 +1,39 @@
+# 2026-09-25 21:37:02 UTC  |  host  |  <repo>
+$ forge script script/DemoAgent.s.sol --sig beat() --rpc-url http://127.0.0.1:8545 --broadcast --slow --unlocked --sender 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+
+No files changed, compilation skipped
+Script ran successfully.
+
+== Logs ==
+  AGENT_STATUS Alive
+  AGENT_NOW 1790375134
+  AGENT_TH 1790375134
+  AGENT_TL 1790374719
+  AGENT_DEADLINE 1790375199
+  AGENT_CLAIMABLE_AT 1790375319
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 31337
+
+Estimated gas price: 0.005610539 gwei
+
+Estimated total gas used for script: 39851
+
+Estimated amount required: 0.000000223585589689 ETH
+
+==========================
+
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+
+Transactions saved to: <repo>/broadcast\DemoAgent.s.sol\31337\beat-latest.json
+
+Sensitive values saved to: <repo>/cache\DemoAgent.s.sol\31337\beat-latest.json
+
+
+# exit code: 0

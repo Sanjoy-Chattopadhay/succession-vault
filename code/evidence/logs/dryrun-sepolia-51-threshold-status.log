@@ -1,0 +1,13 @@
+# 2026-09-25 21:42:55 UTC  |  host  |  <repo>
+$ forge script script/DemoThreshold.s.sol --sig status() --rpc-url http://127.0.0.1:8545 --unlocked --sender 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+
+No files changed, compilation skipped
+Script ran successfully.
+
+== Logs ==
+  THR_STATUS Alive
+  THR_NOW 1790375606
+  THR_TL 1790375599
+  THR_DEADLINE 1790376199
+
+# exit code: 0

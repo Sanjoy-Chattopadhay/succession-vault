@@ -1,0 +1,13 @@
+# 2026-09-25 23:28:01 UTC  |  host  |  <repo>
+$ forge script script/DemoThreshold.s.sol --sig status() --rpc-url https://ethereum-sepolia-rpc.publicnode.com
+
+No files changed, compilation skipped
+Script ran successfully.
+
+== Logs ==
+  THR_STATUS Alive
+  THR_NOW 1790378880
+  THR_TL 1790378856
+  THR_DEADLINE 1790379456
+
+# exit code: 0

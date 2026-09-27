@@ -1,0 +1,150 @@
+{
+  "generatedBy": "js/gen-batch-fixtures.mjs",
+  "enrollLevels": 16,
+  "bitsPerWord": 248,
+  "measurements": [
+    {
+      "circuit": "agg_N1_m16_w1",
+      "n": 1,
+      "mtLevels": 16,
+      "words": 1,
+      "provingMs": 543,
+      "provingMsPerPrincipal": 543,
+      "provingMsRuns": [
+        543
+      ],
+      "enrollProvingMs": 551,
+      "publicSignals": 5
+    },
+    {
+      "circuit": "agg_N1_m40_w1",
+      "n": 1,
+      "mtLevels": 40,
+      "words": 1,
+      "provingMs": 728,
+      "provingMsPerPrincipal": 728,
+      "provingMsRuns": [
+        728
+      ],
+      "enrollProvingMs": 274,
+      "publicSignals": 5
+    },
+    {
+      "circuit": "agg_N2_m40_w1",
+      "n": 2,
+      "mtLevels": 40,
+      "words": 1,
+      "provingMs": 1268,
+      "provingMsPerPrincipal": 634,
+      "provingMsRuns": [
+        1268
+      ],
+      "enrollProvingMs": 265,
+      "publicSignals": 5
+    },
+    {
+      "circuit": "agg_N4_m40_w1",
+      "n": 4,
+      "mtLevels": 40,
+      "words": 1,
+      "provingMs": 2315,
+      "provingMsPerPrincipal": 579,
+      "provingMsRuns": [
+        2315
+      ],
+      "enrollProvingMs": 268,
+      "publicSignals": 5
+    },
+    {
+      "circuit": "agg_N8_m40_w1",
+      "n": 8,
+      "mtLevels": 40,
+      "words": 1,
+      "provingMs": 4534,
+      "provingMsPerPrincipal": 567,
+      "provingMsRuns": [
+        4534
+      ],
+      "enrollProvingMs": 260,
+      "publicSignals": 5
+    },
+    {
+      "circuit": "agg_N16_m16_w1",
+      "n": 16,
+      "mtLevels": 16,
+      "words": 1,
+      "provingMs": 5762,
+      "provingMsPerPrincipal": 360,
+      "provingMsRuns": [
+        5762
+      ],
+      "enrollProvingMs": 263,
+      "publicSignals": 5
+    },
+    {
+      "circuit": "agg_N1_m16_w2",
+      "n": 1,
+      "mtLevels": 16,
+      "words": 2,
+      "provingMs": 493,
+      "provingMsPerPrincipal": 493,
+      "provingMsRuns": [
+        493
+      ],
+      "enrollProvingMs": 277,
+      "publicSignals": 6
+    },
+    {
+      "circuit": "agg_N1_m16_w4",
+      "n": 1,
+      "mtLevels": 16,
+      "words": 4,
+      "provingMs": 481,
+      "provingMsPerPrincipal": 481,
+      "provingMsRuns": [
+        481
+      ],
+      "enrollProvingMs": 258,
+      "publicSignals": 8
+    },
+    {
+      "circuit": "agg_N1_m16_w8",
+      "n": 1,
+      "mtLevels": 16,
+      "words": 8,
+      "provingMs": 503,
+      "provingMsPerPrincipal": 503,
+      "provingMsRuns": [
+        503
+      ],
+      "enrollProvingMs": 259,
+      "publicSignals": 12
+    },
+    {
+      "circuit": "agg_N1_m16_w16",
+      "n": 1,
+      "mtLevels": 16,
+      "words": 16,
+      "provingMs": 498,
+      "provingMsPerPrincipal": 498,
+      "provingMsRuns": [
+        498
+      ],
+      "enrollProvingMs": 259,
+      "publicSignals": 20
+    },
+    {
+      "circuit": "agg_N1_m16_w32",
+      "n": 1,
+      "mtLevels": 16,
+      "words": 32,
+      "provingMs": 484,
+      "provingMsPerPrincipal": 484,
+      "provingMsRuns": [
+        484
+      ],
+      "enrollProvingMs": 262,
+      "publicSignals": 36
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+    "exitcode": 0,
+    "test_results": {
+        "test/halmos/VaultSymbolic.t.sol:VaultSymbolic": [
+            {
+                "name": "check_P9_multiProofMeetsThreshold((uint256[2],uint256[2][2],uint256[2])[],uint256[],uint256[])",
+                "exitcode": 0,
+                "num_models": 0,
+                "models": [],
+                "num_paths": [
+                    73,
+                    6,
+                    0
+                ],
+                "time": [
+                    3.4124273999768775,
+                    3.412404600006994,
+                    1.850002445280552e-05
+                ],
+                "num_bounded_loops": 0
+            }
+        ]
+    }
+}

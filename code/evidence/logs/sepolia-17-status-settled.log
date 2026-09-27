@@ -1,0 +1,15 @@
+# 2026-09-25 23:09:38 UTC  |  host  |  <repo>
+$ forge script script/Demo.s.sol --sig status() --rpc-url https://ethereum-sepolia-rpc.publicnode.com
+
+No files changed, compilation skipped
+Script ran successfully.
+
+== Logs ==
+  status:         Settled
+  now:            1790377776
+  deadline:       1790375592
+  claimable at:   1790375892
+  last heartbeat: 1790374992
+  last life proof: 1790374992 (zk)
+
+# exit code: 0

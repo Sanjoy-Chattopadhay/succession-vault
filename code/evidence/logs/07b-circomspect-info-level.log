@@ -1,0 +1,33 @@
+# 2026-09-18 09:11:01 UTC  |  host  |  <repo>
+$ bash -c for c in circuits/liveness.circom circuits/age.circom; do echo "=== $c"; circomspect -L node_modules -l INFO $c; done
+
+=== circuits/liveness.circom
+circomspect: analyzing template 'ProofOfLife'
+   ┌─ \\?\<repo>\circuits\liveness.circom:45:36
+45 │         hValue.inputs[i] <== claim[4 + i];
+   = For more details, see https://github.com/trailofbits/circomspect/blob/main/doc/analysis_passes.md#field-element-arithmetic.
+
+   ┌─ \\?\<repo>\circuits\liveness.circom:43:28
+43 │     for (var i = 0; i < 4; i++) {
+   = For more details, see https://github.com/trailofbits/circomspect/blob/main/doc/analysis_passes.md#field-element-arithmetic.
+
+   ┌─ \\?\<repo>\circuits\liveness.circom:65:35
+65 │     for (var i = 0; i < mtLevels; i++) {
+   = For more details, see https://github.com/trailofbits/circomspect/blob/main/doc/analysis_passes.md#field-element-arithmetic.
+
+   ┌─ \\?\<repo>\circuits\liveness.circom:43:21
+43 │     for (var i = 0; i < 4; i++) {
+   = Field elements are always normalized to the interval `(-p/2, p/2]` before they are compared.
+   = For more details, see https://github.com/trailofbits/circomspect/blob/main/doc/analysis_passes.md#field-element-comparison.
+
+   ┌─ \\?\<repo>\circuits\liveness.circom:65:21
+65 │     for (var i = 0; i < mtLevels; i++) {
+   = Field elements are always normalized to the interval `(-p/2, p/2]` before they are compared.
+   = For more details, see https://github.com/trailofbits/circomspect/blob/main/doc/analysis_passes.md#field-element-comparison.
+
+circomspect: 5 issues found.
+=== circuits/age.circom
+circomspect: analyzing template 'AgeGate'
+circomspect: No issues found.
+
+# exit code: 0

@@ -1,0 +1,56 @@
+{
+  "credential": "real Billions LivenessCredential, issued 2025-12-14",
+  "honestControl": {
+    "proofGenerated": true,
+    "provingMs": 1239
+  },
+  "edits": [
+    {
+      "edit": "re-dated: livenessTimestamp set to now",
+      "outcome": "rejected",
+      "detail": "circuit constraint violated during witness generation"
+    },
+    {
+      "edit": "re-dated by one second",
+      "outcome": "rejected",
+      "detail": "circuit constraint violated during witness generation"
+    },
+    {
+      "edit": "moved to another DID (credentialSubject.id)",
+      "outcome": "rejected",
+      "detail": "circuit constraint violated during witness generation"
+    },
+    {
+      "edit": "validity extended (expirationDate + 10 years)",
+      "outcome": "rejected",
+      "detail": "circuit constraint violated during witness generation"
+    },
+    {
+      "edit": "type changed to another credential type",
+      "outcome": "rejected",
+      "detail": "Safe mode validation error."
+    },
+    {
+      "edit": "signed claim edited: subject slot (c1) of coreClaim",
+      "outcome": "rejected",
+      "detail": "circuit constraint violated during witness generation"
+    },
+    {
+      "edit": "signed claim edited: expiration slot (c4) of coreClaim",
+      "outcome": "rejected",
+      "detail": "circuit constraint violated during witness generation"
+    },
+    {
+      "edit": "signature altered (last byte)",
+      "outcome": "rejected",
+      "detail": "circuit constraint violated during witness generation"
+    },
+    {
+      "edit": "issuer key swapped in authCoreClaim",
+      "outcome": "rejected",
+      "detail": "circuit constraint violated during witness generation"
+    }
+  ],
+  "rejected": 9,
+  "total": 9
+}

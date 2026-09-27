@@ -1,0 +1,101 @@
+{
+  "tool": "halmos 0.3.3",
+  "generatedBy": "scripts/halmos.sh + scripts/halmos_summary.py",
+  "checks": {
+    "check_NEG_livenessNeverChanges": {
+      "result": "FAIL",
+      "paths": 639,
+      "time": "180.37s",
+      "wallSeconds": 183,
+      "negativeControl": true
+    },
+    "check_NEG_rootNeverChanges": {
+      "result": "FAIL",
+      "paths": 637,
+      "time": "179.78s",
+      "wallSeconds": 183,
+      "negativeControl": true
+    },
+    "check_P1_heartbeatCannotExtendLiveness": {
+      "result": "PASS",
+      "paths": 12,
+      "time": "0.63s",
+      "wallSeconds": 4,
+      "negativeControl": false
+    },
+    "check_P3_livenessTimeOnlyByAcceptedProof": {
+      "result": "PASS",
+      "paths": 644,
+      "time": "344.55s",
+      "wallSeconds": 347,
+      "negativeControl": false
+    },
+    "check_P4_settlementIsFinal": {
+      "result": "PASS",
+      "paths": 145,
+      "time": "78.14s",
+      "wallSeconds": 81,
+      "negativeControl": false
+    },
+    "check_P5_noSettlementBeforeGrace": {
+      "result": "PASS",
+      "paths": 600,
+      "time": "173.04s",
+      "wallSeconds": 176,
+      "negativeControl": false
+    },
+    "check_P6_ownerActionsNeedKeyAndFreshProof": {
+      "result": "PASS",
+      "paths": 514,
+      "time": "280.87s",
+      "wallSeconds": 283,
+      "negativeControl": false
+    },
+    "check_P7_claimedBitsNeverCleared": {
+      "result": "PASS",
+      "paths": 1755,
+      "time": "236.15s",
+      "wallSeconds": 240,
+      "negativeControl": false
+    },
+    "check_P7_doubleClaimReverts": {
+      "result": "PASS",
+      "paths": 112,
+      "time": "2.13s",
+      "wallSeconds": 5,
+      "negativeControl": false
+    },
+    "check_P8_poolsNeverOverPaid": {
+      "result": "PASS",
+      "paths": 1595,
+      "time": "226.97s",
+      "wallSeconds": 231,
+      "negativeControl": false
+    },
+    "check_P9_multiProofMeetsThreshold": {
+      "result": "PASS",
+      "paths": 35,
+      "time": "1.14s",
+      "wallSeconds": 4,
+      "negativeControl": false
+    },
+    "check_P9_singleProofNeedsThresholdOne": {
+      "result": "PASS",
+      "paths": 8,
+      "time": "0.14s",
+      "wallSeconds": 3,
+      "negativeControl": false
+    },
+    "check_R_epochsOnlyByAggregatorAndWellFormed": {
+      "result": "PASS",
+      "paths": 39,
+      "time": "0.43s",
+      "wallSeconds": 3,
+      "negativeControl": false
+    }
+  },
+  "propertiesProved": 11,
+  "propertiesTotal": 11,
+  "negativeControlsRefuted": 2,
+  "negativeControlsTotal": 2
+}

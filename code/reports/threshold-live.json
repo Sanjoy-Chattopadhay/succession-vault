@@ -1,0 +1,20 @@
+{
+  "generatedBy": "js/sepolia-summary.mjs",
+  "aloneSingle": "rejected (ThresholdNotMet)",
+  "aloneMulti": "rejected (ThresholdNotMet)",
+  "aloneRejected": 2,
+  "multiAccepted": 2,
+  "multiGas": [
+    444203,
+    444179
+  ],
+  "multiTx": [
+    "0x333eb7f47db6e223d6476fd95eae56ecf580f751359635081c73ed94f521415e",
+    "0x06bae2edf2900abe2c4127e759178ef22d236afa8daa4739a14b1edb2ff10706"
+  ],
+  "setThresholdGas": [
+    56804,
+    56804,
+    39692
+  ]
+}

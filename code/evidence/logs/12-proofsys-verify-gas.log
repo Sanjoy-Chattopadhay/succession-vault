@@ -1,0 +1,39 @@
+# 2026-09-18 10:15:17 UTC  |  host  |  <repo>
+$ forge test --match-contract ProofSystems --isolate -vv
+
+Compiling 4 files with Solc 0.8.28
+Solc 0.8.28 finished in 963.59ms
+Compiler run successful with warnings:
+Warning (5667): Unused function parameter. Remove or comment out the variable name to silence this warning.
+   --> test/proofsys/LivenessPlonkVerifier.sol:123:26:
+    |
+123 |     function verifyProof(uint256[24] calldata _proof, uint256[2] calldata _pubSignals) public view returns (bool) {
+    |                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (5667): Unused function parameter. Remove or comment out the variable name to silence this warning.
+   --> test/proofsys/AgePlonkVerifier.sol:123:26:
+    |
+123 |     function verifyProof(uint256[24] calldata _proof, uint256[2] calldata _pubSignals) public view returns (bool) {
+    |                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (5667): Unused function parameter. Remove or comment out the variable name to silence this warning.
+   --> test/proofsys/AgeFflonkVerifier.sol:164:26:
+    |
+164 |     function verifyProof(bytes32[24] calldata proof, uint256[2] calldata pubSignals) public view returns (bool) {
+    |                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Ran 1 test for test/ProofSystems.t.sol:ProofSystems
+[PASS] test_VerificationGasPerProofSystem() (gas: 11043019)
+Logs:
+  groth16_liveness: 195611
+  groth16_age: 195611
+  plonk_liveness: 258783
+  plonk_age: 255981
+  fflonk_age: 181028
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 13.41ms (12.44ms CPU time)
+
+Ran 1 test suite in 14.22ms (13.41ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+
+# exit code: 0

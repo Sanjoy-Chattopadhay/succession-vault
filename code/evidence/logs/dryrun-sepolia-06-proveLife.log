@@ -1,0 +1,39 @@
+# 2026-09-25 21:28:04 UTC  |  host  |  <repo>
+$ forge script script/Demo.s.sol --sig proveLife() --rpc-url http://127.0.0.1:8545 --broadcast --slow --unlocked --sender 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+
+No files changed, compilation skipped
+Script ran successfully.
+
+== Logs ==
+  status:         Alive
+  now:            1790371973
+  deadline:       1790372573
+  claimable at:   1790372873
+  last heartbeat: 1790371973
+  last life proof: 1790371973 (zk)
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 31337
+
+Estimated gas price: 0.201586129 gwei
+
+Estimated total gas used for script: 327908
+
+Estimated amount required: 0.000066101704388132 ETH
+
+==========================
+
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+
+Transactions saved to: <repo>/broadcast\Demo.s.sol\31337\proveLife-latest.json
+
+Sensitive values saved to: <repo>/cache\Demo.s.sol\31337\proveLife-latest.json
+
+
+# exit code: 0

@@ -1,0 +1,39 @@
+# 2026-09-25 22:16:49 UTC  |  host  |  <repo>
+$ forge script script/Demo.s.sol --sig heartbeat() --rpc-url https://ethereum-sepolia-rpc.publicnode.com --broadcast --slow
+
+No files changed, compilation skipped
+Script ran successfully.
+
+== Logs ==
+  status:         Alive
+  now:            1790374608
+  deadline:       1790375208
+  claimable at:   1790375508
+  last heartbeat: 1790374608
+  last life proof: 1790374548 (creation)
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 11155111
+
+Estimated gas price: 2.12940812 gwei
+
+Estimated total gas used for script: 43946
+
+Estimated amount required: 0.00009357896924152 ETH
+
+==========================
+
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+
+Transactions saved to: <repo>/broadcast\Demo.s.sol\11155111\heartbeat-latest.json
+
+Sensitive values saved to: <repo>/cache\Demo.s.sol\11155111\heartbeat-latest.json
+
+
+# exit code: 0

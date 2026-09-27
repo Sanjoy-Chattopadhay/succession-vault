@@ -1,0 +1,317 @@
+No files changed, compilation skipped
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+   ╭▸ test\Invariant.t.sol:63:17
+   │
+63 │             if (block.timestamp <= opensAfter) earlyClaims++;
+   │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ test\legacy\src\HeartbeatManager.sol:131:17
+    │
+131 │         require(pubSignals[2] > block.timestamp, "Credential expired");
+    │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ test\legacy\src\HeartbeatManager.sol:136:13
+    │
+136 │             pubSignals[4] >= block.timestamp - 300 && pubSignals[4] <= block.timestamp + 300,
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ test\legacy\src\HeartbeatManager.sol:136:55
+    │
+136 │             pubSignals[4] >= block.timestamp - 300 && pubSignals[4] <= block.timestamp + 300,
+    │                                                       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ test\legacy\src\HeartbeatManager.sol:219:13
+    │
+219 │             block.timestamp >= will.inactivityDetectedAt + INACTIVITY_CONFIRMATION_DELAY,
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ test\legacy\src\HeartbeatManager.sol:238:13
+    │
+238 │             block.timestamp >= will.gracePeriodStartedAt + GRACE_PERIOD_DURATION,
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ test\legacy\src\HeartbeatManager.sol:289:16
+    │
+289 │         return block.timestamp > will.lastHeartbeat + _heartbeatInterval(will);
+    │                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src\LivenessRegistry.sol:161:62
+    │
+161 │         if (start > end || end - start < MIN_EPOCH_LENGTH || uint256(end) > block.timestamp + MAX_CLOCK_SKEW) {
+    │                                                              ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+   ╭▸ test\Invariant.t.sol:70:16
+   │
+70 │             && block.timestamp <= uint256(vault.lastLifeProof()) + authWindow;
+   │                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src\BequestVault.sol:222:46
+    │
+222 │         if (livenessTime <= lastLifeProof || livenessTime > block.timestamp + MAX_CLOCK_SKEW) {
+    │                                              ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ test\legacy\src\AssetManager.sol:598:13
+    │
+598 │             block.timestamp >= will.executionStartTime + UNCLAIMED_ASSET_DEADLINE,
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[incorrect-shift]: the order of args in a shift operation is incorrect
+    ╭▸ src\LivenessRegistry.sol:203:23
+    │
+203 │         uint256 bit = 1 << (slot % BITS_PER_WORD);
+    │                       ━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#incorrect-shift
+
+warning[incorrect-shift]: the order of args in a shift operation is incorrect
+    ╭▸ src\LivenessRegistry.sol:229:62
+    │
+229 │         return _attendance[epochId][slot / BITS_PER_WORD] & (1 << (slot % BITS_PER_WORD)) != 0;
+    │                                                              ━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#incorrect-shift
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test\Gas.t.sol:38:9
+   │
+38 │         token.transfer(address(vault), 1 ether);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ test\legacy\src\ExecutionManager.sol:137:21
+    │
+137 │                 if (block.timestamp < heir.vestingUnlock) {
+    │                     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ test\legacy\src\AssetManager.sol:631:13
+    │
+631 │             block.timestamp >= will.executionStartTime + UNCLAIMED_ASSET_DEADLINE,
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ test\legacy\src\AssetManager.sol:662:13
+    │
+662 │             block.timestamp >= will.executionStartTime + UNCLAIMED_ASSET_DEADLINE,
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ script\DemoAttacks.s.sol:108:25
+    │
+108 │         uint256 nowTs = block.timestamp > vault.lastLifeProof() ? block.timestamp : uint256(vault.lastLifeProof()) + 1;
+    │                         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src\BequestVault.sol:260:26
+    │
+260 │         if (t <= last || t > block.timestamp + MAX_CLOCK_SKEW) revert StaleOrFutureProof();
+    │                          ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src\BequestVault.sol:296:13
+    │
+296 │         if (uint256(since) > block.timestamp + MAX_CLOCK_SKEW) return 0;
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src\BequestVault.sol:331:24
+    │
+331 │         if (!proven || block.timestamp > uint256(at) + AUTH_WINDOW) revert ProofOfLifeRequired();
+    │                        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ script\Demo.s.sol:145:29
+    │
+145 │         if (!v.settled() && block.timestamp <= v.claimableAt()) {
+    │                             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src\BequestVault.sol:382:13
+    │
+382 │         if (cutoff > ageCutoff(block.timestamp, b.minAge)) revert AgeNotReached();
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src\BequestVault.sol:408:17
+    │
+408 │             if (cutoff > ageCutoff(block.timestamp, bs[i].minAge)) revert AgeNotReached();
+    │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src\BequestVault.sol:418:13
+    │
+418 │         if (block.timestamp <= claimableAt() + claimWindow()) revert ClaimWindowOpen();
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src\BequestVault.sol:430:17
+    │
+430 │             if (block.timestamp <= claimableAt()) revert NotClaimable();
+    │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src\BequestVault.sol:433:13
+    │
+433 │         if (block.timestamp < b.notBefore) revert TimeLocked();
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[incorrect-shift]: the order of args in a shift operation is incorrect
+    ╭▸ src\BequestVault.sol:439:23
+    │
+439 │         uint256 bit = 1 << (b.index & 0xff);
+    │                       ━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#incorrect-shift
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src\BequestVault.sol:498:13
+    │
+498 │         if (block.timestamp <= d) return Status.Alive;
+    │             ━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src\BequestVault.sol:499:13
+    │
+499 │         if (block.timestamp <= d + gracePeriod()) return Status.Grace;
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[incorrect-shift]: the order of args in a shift operation is incorrect
+    ╭▸ src\BequestVault.sol:504:46
+    │
+504 │         return _claimedBitmap[index >> 8] & (1 << (index & 0xff)) != 0;
+    │                                              ━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#incorrect-shift
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ script\DemoAttacks.s.sol:176:17
+    │
+176 │         require(block.timestamp >= last + 1 + registry.MIN_EPOCH_LENGTH(), "B2 needs one minimum epoch since the last");
+    │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ test\legacy\src\ExecutionManager.sol:211:17
+    │
+211 │         require(block.timestamp <= dispute.deadline, "Dispute expired");
+    │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ test\Registry.t.sol:414:17
+    │
+414 │             if (block.timestamp <= horizon) {
+    │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ script\Demo.s.sol:156:17
+    │
+156 │             if (block.timestamp < b.notBefore) {
+    │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ test\legacy\src\ExecutionManager.sol:250:17
+    │
+250 │         require(block.timestamp > dispute.deadline, "Deadline not passed");
+    │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ test\legacy\src\ExecutionManager.sol:278:17
+    │
+278 │         require(block.timestamp > will.heirProofDeadline, "Deadline not passed");
+    │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ test\legacy\src\ExecutionManager.sol:336:17
+    │
+336 │         require(block.timestamp <= _deadline, "Signature expired");
+    │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+WARNING  Skipped BoundSweep.json due to parsing failure: KeyError: 'ast'       
+         (see https://github.com/a16z/halmos/wiki/warnings#parsing-error)      
+WARNING  Skipped DemoThreshold.json due to parsing failure: KeyError: 'ast'    
+         (see https://github.com/a16z/halmos/wiki/warnings#parsing-error)      
+WARNING  Skipped LookbackFlushProbe.json due to parsing failure: KeyError:     
+         'ast'                                                                 
+         (see https://github.com/a16z/halmos/wiki/warnings#parsing-error)      
+
+Running 1 tests for test/halmos/VaultSymbolic.t.sol:VaultSymbolic
+[32m[PASS][0m check_P9_singleProofNeedsThresholdOne((uint256[2],uint256[2][2],uint256[2]),uint256,uint256) (paths: 8, time: 0.23s, bounds: [])
+Symbolic test result: 1 passed; 0 failed; time: 0.37s
+# wall seconds: 7

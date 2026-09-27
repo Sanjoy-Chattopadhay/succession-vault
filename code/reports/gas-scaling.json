@@ -1,0 +1,62 @@
+{
+  "n1": {
+    "claimERC20_firstOfPool": 118619,
+    "createVault": 168887,
+    "heirs": 1,
+    "proofLength": 0
+  },
+  "n1024": {
+    "claimERC20_firstOfPool": 130905,
+    "createVault": 168899,
+    "heirs": 1024,
+    "proofLength": 10
+  },
+  "n128": {
+    "claimERC20_firstOfPool": 128592,
+    "createVault": 168899,
+    "heirs": 128,
+    "proofLength": 7
+  },
+  "n16": {
+    "claimERC20_firstOfPool": 126423,
+    "createVault": 168875,
+    "heirs": 16,
+    "proofLength": 4
+  },
+  "n2": {
+    "claimERC20_firstOfPool": 124182,
+    "createVault": 168899,
+    "heirs": 2,
+    "proofLength": 1
+  },
+  "n256": {
+    "claimERC20_firstOfPool": 129379,
+    "createVault": 168899,
+    "heirs": 256,
+    "proofLength": 8
+  },
+  "n32": {
+    "claimERC20_firstOfPool": 127222,
+    "createVault": 168899,
+    "heirs": 32,
+    "proofLength": 5
+  },
+  "n4": {
+    "claimERC20_firstOfPool": 124897,
+    "createVault": 168899,
+    "heirs": 4,
+    "proofLength": 2
+  },
+  "n64": {
+    "claimERC20_firstOfPool": 127937,
+    "createVault": 168899,
+    "heirs": 64,
+    "proofLength": 6
+  },
+  "n8": {
+    "claimERC20_firstOfPool": 125696,
+    "createVault": 168899,
+    "heirs": 8,
+    "proofLength": 3
+  }
+}

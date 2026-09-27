@@ -1,0 +1,161 @@
+{
+  "generatedBy": "js/agent-report.mjs",
+  "timers": {
+    "heartbeatSec": 180,
+    "lifeProofSec": 480,
+    "graceSec": 120
+  },
+  "humanLastProofOfLife": 1790377896,
+  "theoreticalCapOnDeadline": 1790378376,
+  "theoreticalClaimableAt": 1790378496,
+  "heartbeats": [
+    {
+      "status": "Alive",
+      "now": 1790377944,
+      "tH": 1790377944,
+      "tL": 1790377896,
+      "deadline": 1790378124,
+      "claimableAt": 1790378244,
+      "secondsAfterProof": 48,
+      "gasUsed": 30049,
+      "txStatus": "ok",
+      "hash": "0x27eeb73a7a2b3eb39cde838f58f35dd4ec467d1abe1791947b1268223c56604a",
+      "block": 11782366
+    },
+    {
+      "status": "Alive",
+      "now": 1790378016,
+      "tH": 1790378016,
+      "tL": 1790377896,
+      "deadline": 1790378196,
+      "claimableAt": 1790378316,
+      "secondsAfterProof": 120,
+      "gasUsed": 30049,
+      "txStatus": "ok",
+      "hash": "0x02d3d997f5c5cfce986d6d35d352ed4068d42754b1a221d802d0fddbc57f4d39",
+      "block": 11782372
+    },
+    {
+      "status": "Alive",
+      "now": 1790378088,
+      "tH": 1790378088,
+      "tL": 1790377896,
+      "deadline": 1790378268,
+      "claimableAt": 1790378388,
+      "secondsAfterProof": 192,
+      "gasUsed": 30049,
+      "txStatus": "ok",
+      "hash": "0xe6050dde9db0836b52e584c8da648445a92966e13c505074bfc577b2b9788293",
+      "block": 11782377
+    },
+    {
+      "status": "Alive",
+      "now": 1790378160,
+      "tH": 1790378160,
+      "tL": 1790377896,
+      "deadline": 1790378340,
+      "claimableAt": 1790378460,
+      "secondsAfterProof": 264,
+      "gasUsed": 30049,
+      "txStatus": "ok",
+      "hash": "0x4f2fdcf9bbdeba9d1a8a87206919da6fba5d1b655f8a857d6164060a25942384",
+      "block": 11782383
+    },
+    {
+      "status": "Alive",
+      "now": 1790378232,
+      "tH": 1790378232,
+      "tL": 1790377896,
+      "deadline": 1790378376,
+      "claimableAt": 1790378496,
+      "secondsAfterProof": 336,
+      "gasUsed": 30049,
+      "txStatus": "ok",
+      "hash": "0x7d85b42d3332161d8015068828072f1b554c78ac90d5924cfdebb6f6526df495",
+      "block": 11782389
+    },
+    {
+      "status": "Alive",
+      "now": 1790378304,
+      "tH": 1790378304,
+      "tL": 1790377896,
+      "deadline": 1790378376,
+      "claimableAt": 1790378496,
+      "secondsAfterProof": 408,
+      "gasUsed": 30049,
+      "txStatus": "ok",
+      "hash": "0x3f760ddceeddbdaa1d9f4f647a2c8f4a19f65048871a6d080b9db8128d61c9bd",
+      "block": 11782393
+    },
+    {
+      "status": "Alive",
+      "now": 1790378364,
+      "tH": 1790378364,
+      "tL": 1790377896,
+      "deadline": 1790378376,
+      "claimableAt": 1790378496,
+      "secondsAfterProof": 468,
+      "gasUsed": 30049,
+      "txStatus": "ok",
+      "hash": "0xccbf754acfa8b6753bb9f3b2f08584126da6a822e4bb2be4ceeacea17316d737",
+      "block": 11782398
+    },
+    {
+      "status": "Grace",
+      "now": 1790378436,
+      "tH": 1790378436,
+      "tL": 1790377896,
+      "deadline": 1790378376,
+      "claimableAt": 1790378496,
+      "secondsAfterProof": 540,
+      "gasUsed": 30049,
+      "txStatus": "ok",
+      "hash": "0xa5773c8884ea373c4b23fa02b0b7c923384fd537a4f496c246a8ac0182a70bc8",
+      "block": 11782402
+    },
+    {
+      "status": "Grace",
+      "now": 1790378496,
+      "tH": 1790378496,
+      "tL": 1790377896,
+      "deadline": 1790378376,
+      "claimableAt": 1790378496,
+      "secondsAfterProof": 600,
+      "gasUsed": 30049,
+      "txStatus": "ok",
+      "hash": "0x8aee724f8a0abf8641af8538e055cb5915a6137c64a7d9987d0ca775165a2f93",
+      "block": 11782406
+    },
+    {
+      "status": "Claimable",
+      "now": 1790378556,
+      "tH": 1790378556,
+      "tL": 1790377896,
+      "deadline": 1790378376,
+      "claimableAt": 1790378496,
+      "secondsAfterProof": 660,
+      "gasUsed": 30049,
+      "txStatus": "ok",
+      "hash": "0x097d57d3ef56c1be39fab1aea5ba7006629719a4b2de5556f5306767bbd47e20",
+      "block": 11782411
+    }
+  ],
+  "final": {
+    "status": "Claimable",
+    "now": 1790378616,
+    "tH": 1790378568,
+    "tL": 1790377896,
+    "deadline": 1790378376,
+    "claimableAt": 1790378496
+  },
+  "maxDeadlineReached": 1790378376,
+  "claimableWhileAgentActive": true,
+  "statusMatchesTheory": true,
+  "deadlineNeverExceedsCap": true,
+  "deadlineFrozenAfterSec": 336,
+  "heartbeatsAfterFreeze": 5,
+  "gasPerHeartbeat": [
+    30049
+  ],
+  "allHeartbeatsSucceeded": true
+}

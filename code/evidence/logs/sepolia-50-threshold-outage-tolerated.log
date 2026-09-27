@@ -1,0 +1,37 @@
+# 2026-09-25 23:27:41 UTC  |  host  |  <repo>
+$ forge script script/DemoThreshold.s.sol --sig multi() --rpc-url https://ethereum-sepolia-rpc.publicnode.com --broadcast --slow
+
+No files changed, compilation skipped
+Script ran successfully.
+
+== Logs ==
+  THR_STATUS Alive
+  THR_NOW 1790378856
+  THR_TL 1790378856
+  THR_DEADLINE 1790379456
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 11155111
+
+Estimated gas price: 1.910485652 gwei
+
+Estimated total gas used for script: 649611
+
+Estimated amount required: 0.001241072494881372 ETH
+
+==========================
+
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+
+Transactions saved to: <repo>/broadcast\DemoThreshold.s.sol\11155111\multi-latest.json
+
+Sensitive values saved to: <repo>/cache\DemoThreshold.s.sol\11155111\multi-latest.json
+
+
+# exit code: 0

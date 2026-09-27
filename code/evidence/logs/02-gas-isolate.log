@@ -1,0 +1,60 @@
+# 2026-09-18 10:15:20 UTC  |  host  |  <repo>
+$ forge test --match-contract GasBenchmark --isolate -vv
+
+Compiling 1 files with Solc 0.8.28
+Solc 0.8.28 finished in 1.52s
+Compiler run successful!
+
+Ran 3 tests for test/Gas.t.sol:GasBenchmark
+[PASS] test_GasPerOperation() (gas: 2973229)
+Logs:
+  createVault: 168815
+  depositETH: 23712
+  depositERC20_transfer: 34371
+  heartbeat: 30005
+  proveLife: 237335
+  withdrawETH: 37818
+  setAllocationRoot: 30507
+  claimETH_first: 125752
+  claimETH: 85211
+  claimERC20_firstOfPool: 101643
+  claimERC20: 85294
+  claimERC721: 79937
+  claimERC1155: 101709
+  claimWithAgeProof: 291603
+  sweepERC20: 62590
+  sweepETH: 68022
+
+[PASS] test_GasScalingWithHeirs() (gas: 4169075)
+Logs:
+  n=1 create: 168803
+  n=1 claim: 118427
+  n=2 create: 168815
+  n=2 claim: 123990
+  n=4 create: 168815
+  n=4 claim: 124705
+  n=8 create: 168815
+  n=8 claim: 125504
+  n=16 create: 168791
+  n=16 claim: 126231
+  n=32 create: 168815
+  n=32 claim: 127030
+  n=64 create: 168815
+  n=64 claim: 127745
+  n=128 create: 168815
+  n=128 claim: 128400
+  n=256 create: 168815
+  n=256 claim: 129187
+  n=1024 create: 168815
+  n=1024 claim: 130713
+
+[PASS] test_GasVerifiersOnly() (gas: 1060313)
+Logs:
+  verifyLivenessProof: 195611
+  verifyAgeProof: 195611
+
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 113.21ms (163.37ms CPU time)
+
+Ran 1 test suite in 117.60ms (113.21ms CPU time): 3 tests passed, 0 failed, 0 skipped (3 total tests)
+
+# exit code: 0

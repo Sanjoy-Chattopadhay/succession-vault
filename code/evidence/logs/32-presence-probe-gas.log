@@ -1,0 +1,21 @@
+# 2026-09-18 15:52:26 UTC  |  host  |  <repo>
+$ forge test --root experiments/presence-probe --isolate -vv
+
+Compiling 22 files with Solc 0.8.28
+Solc 0.8.28 finished in 1.45s
+Compiler run successful!
+
+Ran 2 tests for test/Presence.t.sol:PresenceTest
+[PASS] test_Gas() (gas: 258364)
+Logs:
+  heartbeat (key only): 27336
+  provePresence (WebAuthn + P256VERIFY): 51210
+  proveLifeLazy (first): 59785
+  proveLifeLazy (later): 42685
+
+[PASS] test_RejectsReplayStaleAndNoUV() (gas: 293974)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 2.29ms (2.17ms CPU time)
+
+Ran 1 test suite in 3.56ms (2.29ms CPU time): 2 tests passed, 0 failed, 0 skipped (2 total tests)
+
+# exit code: 0

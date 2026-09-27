@@ -1,0 +1,62 @@
+{
+  "h1d_l7d_g1d": {
+    "claimableAtBoundPlus1s": true,
+    "conventionalDeadlineAfterTStarSec": 1468800,
+    "firstObservedClaimableAfterSec": 720000,
+    "graceSec": 86400,
+    "heartbeatSec": 86400,
+    "heartbeatsAccepted": 48,
+    "lifeProofSec": 604800,
+    "maxDeadlineAfterTStarSec": 604800,
+    "notClaimableAtBound": true,
+    "theoreticalClaimableAfterSec": 691200
+  },
+  "h1h_l3h_g1h": {
+    "claimableAtBoundPlus1s": true,
+    "conventionalDeadlineAfterTStarSec": 32400,
+    "firstObservedClaimableAfterSec": 15600,
+    "graceSec": 3600,
+    "heartbeatSec": 3600,
+    "heartbeatsAccepted": 24,
+    "lifeProofSec": 10800,
+    "maxDeadlineAfterTStarSec": 10800,
+    "notClaimableAtBound": true,
+    "theoreticalClaimableAfterSec": 14400
+  },
+  "h30d_l365d_g90d": {
+    "claimableAtBoundPlus1s": true,
+    "conventionalDeadlineAfterTStarSec": 81216000,
+    "firstObservedClaimableAfterSec": 39744000,
+    "graceSec": 7776000,
+    "heartbeatSec": 2592000,
+    "heartbeatsAccepted": 91,
+    "lifeProofSec": 31536000,
+    "maxDeadlineAfterTStarSec": 31536000,
+    "notClaimableAtBound": true,
+    "theoreticalClaimableAfterSec": 39312000
+  },
+  "h30d_l90d_g30d": {
+    "claimableAtBoundPlus1s": true,
+    "conventionalDeadlineAfterTStarSec": 23328000,
+    "firstObservedClaimableAfterSec": 11232000,
+    "graceSec": 2592000,
+    "heartbeatSec": 2592000,
+    "heartbeatsAccepted": 24,
+    "lifeProofSec": 7776000,
+    "maxDeadlineAfterTStarSec": 7776000,
+    "notClaimableAtBound": true,
+    "theoreticalClaimableAfterSec": 10368000
+  },
+  "h7d_l30d_g7d": {
+    "claimableAtBoundPlus1s": true,
+    "conventionalDeadlineAfterTStarSec": 6854400,
+    "firstObservedClaimableAfterSec": 3225600,
+    "graceSec": 604800,
+    "heartbeatSec": 604800,
+    "heartbeatsAccepted": 31,
+    "lifeProofSec": 2592000,
+    "maxDeadlineAfterTStarSec": 2592000,
+    "notClaimableAtBound": true,
+    "theoreticalClaimableAfterSec": 3196800
+  }
+}

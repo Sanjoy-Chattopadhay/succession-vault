@@ -1,0 +1,19 @@
+# 2026-09-18 15:51:40 UTC  |  host  |  <repo>
+$ powershell -ExecutionPolicy Bypass -File scripts/unthrottled.ps1 node js/bench-pipeline.mjs fixtures/private/liveness-2025-12-02.json fixtures/private/liveness-2025-12-14.json --runs 10
+
+fixtures/private/liveness-2025-12-02.json: depth 5 (last non-zero sibling at level 4), total 875 ms
+  parse                 0.3 ms  (sd 0.1)
+  issuerSignature      20.1 ms  (sd 0.7)
+  merklize            296.7 ms  (sd 5.1)
+  witness              98.6 ms  (sd 3.6)
+  prove               459.5 ms  (sd 15.7)
+  verify                9.9 ms  (sd 0.9)
+fixtures/private/liveness-2025-12-14.json: depth 5 (last non-zero sibling at level 4), total 872 ms
+  parse                 0.3 ms  (sd 0)
+  issuerSignature      20.2 ms  (sd 0.3)
+  merklize            298.4 ms  (sd 3.7)
+  witness              98.4 ms  (sd 2.8)
+  prove               454.5 ms  (sd 13.3)
+  verify                8.2 ms  (sd 1)
+
+# exit code: 0

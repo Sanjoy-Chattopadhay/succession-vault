@@ -1,0 +1,26 @@
+# 2026-09-25 22:22:27 UTC  |  host  |  <repo>
+$ forge script script/DemoAgg.s.sol --sig status() --rpc-url https://ethereum-sepolia-rpc.publicnode.com
+
+No files changed, compilation skipped
+Script ran successfully.
+
+== Logs ==
+  vault             0xc7275c9a4FFBBd2a0AC4E60dA5615931f70DDd77
+  registry          0x010481ad036E1B4Ee0C8B12d0F46847bF23f484b
+  enrolled          true
+  slot              0
+  epochs recorded   0
+  registry binding  6179062901531867563342998969998275150153020987600441866130857308702346293750
+  present since     0
+  -- local lastLifeProof (this vault's own transactions) --
+  local tL          1790374548
+  -- from the registry, with no transaction by this vault --
+  registry tL       0
+  -- the two combined, which is what the lifecycle uses --
+  effective tL      1790374548
+  life proven       false
+  block timestamp   1790374944
+  deadline          1790375232
+  claimable at      1790375532
+
+# exit code: 0

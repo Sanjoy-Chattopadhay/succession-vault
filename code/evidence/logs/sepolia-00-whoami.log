@@ -1,0 +1,12 @@
+# 2026-09-25 22:12:15 UTC  |  host  |  <repo>
+$ forge script script/WhoAmI.s.sol --rpc-url https://ethereum-sepolia-rpc.publicnode.com
+
+No files changed, compilation skipped
+Script ran successfully.
+
+== Logs ==
+  chain id: 11155111
+  address:  0x33B33a456f2B039891A0009452bB41b373100d73
+  balance (wei): 171737904633126191
+
+# exit code: 0

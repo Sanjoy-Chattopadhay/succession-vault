@@ -1,0 +1,34 @@
+# 2026-09-25 21:28:07 UTC  |  host  |  <repo>
+$ forge script script/Demo.s.sol --sig withdraw() --rpc-url http://127.0.0.1:8545 --broadcast --slow --unlocked --sender 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+
+No files changed, compilation skipped
+Script ran successfully.
+
+== Logs ==
+  withdrew 0.0005 ETH to 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 31337
+
+Estimated gas price: 0.176923039 gwei
+
+Estimated total gas used for script: 80779
+
+Estimated amount required: 0.000014291666167381 ETH
+
+==========================
+
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+
+Transactions saved to: <repo>/broadcast\Demo.s.sol\31337\withdraw-latest.json
+
+Sensitive values saved to: <repo>/cache\Demo.s.sol\31337\withdraw-latest.json
+
+
+# exit code: 0

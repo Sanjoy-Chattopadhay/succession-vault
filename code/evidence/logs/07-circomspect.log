@@ -1,0 +1,11 @@
+# 2026-09-18 09:11:31 UTC  |  host  |  <repo>
+$ bash -c for c in circuits/liveness.circom circuits/age.circom; do echo "=== $c (level: WARNING and above)"; circomspect -L node_modules $c; done
+
+=== circuits/liveness.circom (level: WARNING and above)
+circomspect: analyzing template 'ProofOfLife'
+circomspect: No issues found.
+=== circuits/age.circom (level: WARNING and above)
+circomspect: analyzing template 'AgeGate'
+circomspect: No issues found.
+
+# exit code: 0

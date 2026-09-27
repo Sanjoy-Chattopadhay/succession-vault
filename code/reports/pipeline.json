@@ -1,0 +1,104 @@
+{
+  "machine": {
+    "cpu": "13th Gen Intel(R) Core(TM) i5-13450HX",
+    "cores": 16,
+    "node": "v22.14.0",
+    "platform": "Windows_NT 10.0.26200"
+  },
+  "runs": 10,
+  "note": "Steps run on the owner's device for one proof of life. JSON-LD contexts are served from a local cache (fixtures/contexts); a first run that downloads them adds network time.",
+  "credentials": [
+    {
+      "credential": "liveness-2025-12-02.json",
+      "credentialBytes": 3123,
+      "smtDepthUsed": 5,
+      "lastNonZeroSibling": 4,
+      "circuitLevels": 40,
+      "stepsMs": {
+        "parse": {
+          "mean": 0.3,
+          "sd": 0.1,
+          "min": 0.2,
+          "max": 0.4
+        },
+        "issuerSignature": {
+          "mean": 20.1,
+          "sd": 0.7,
+          "min": 19.2,
+          "max": 21
+        },
+        "merklize": {
+          "mean": 296.7,
+          "sd": 5.1,
+          "min": 290.4,
+          "max": 306.5
+        },
+        "witness": {
+          "mean": 98.6,
+          "sd": 3.6,
+          "min": 93.5,
+          "max": 103.8
+        },
+        "prove": {
+          "mean": 459.5,
+          "sd": 15.7,
+          "min": 438.8,
+          "max": 492.4
+        },
+        "verify": {
+          "mean": 9.9,
+          "sd": 0.9,
+          "min": 8.9,
+          "max": 11.1
+        }
+      },
+      "deviceTotalMs": 875.2
+    },
+    {
+      "credential": "liveness-2025-12-14.json",
+      "credentialBytes": 3124,
+      "smtDepthUsed": 5,
+      "lastNonZeroSibling": 4,
+      "circuitLevels": 40,
+      "stepsMs": {
+        "parse": {
+          "mean": 0.3,
+          "sd": 0,
+          "min": 0.2,
+          "max": 0.3
+        },
+        "issuerSignature": {
+          "mean": 20.2,
+          "sd": 0.3,
+          "min": 19.9,
+          "max": 21
+        },
+        "merklize": {
+          "mean": 298.4,
+          "sd": 3.7,
+          "min": 293,
+          "max": 305
+        },
+        "witness": {
+          "mean": 98.4,
+          "sd": 2.8,
+          "min": 94.1,
+          "max": 103.7
+        },
+        "prove": {
+          "mean": 454.5,
+          "sd": 13.3,
+          "min": 429.6,
+          "max": 474.3
+        },
+        "verify": {
+          "mean": 8.2,
+          "sd": 1,
+          "min": 6.7,
+          "max": 10.3
+        }
+      },
+      "deviceTotalMs": 871.8
+    }
+  ]
+}

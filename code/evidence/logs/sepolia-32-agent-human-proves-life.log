@@ -1,0 +1,39 @@
+# 2026-09-25 23:11:52 UTC  |  host  |  <repo>
+$ forge script script/DemoAgent.s.sol --sig proveLife() --rpc-url https://ethereum-sepolia-rpc.publicnode.com --broadcast --slow
+
+No files changed, compilation skipped
+Script ran successfully.
+
+== Logs ==
+  AGENT_STATUS Alive
+  AGENT_NOW 1790377896
+  AGENT_TH 1790377896
+  AGENT_TL 1790377896
+  AGENT_DEADLINE 1790378076
+  AGENT_CLAIMABLE_AT 1790378196
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 11155111
+
+Estimated gas price: 2.05501022 gwei
+
+Estimated total gas used for script: 327908
+
+Estimated amount required: 0.00067385429121976 ETH
+
+==========================
+
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+
+Transactions saved to: <repo>/broadcast\DemoAgent.s.sol\11155111\proveLife-latest.json
+
+Sensitive values saved to: <repo>/cache\DemoAgent.s.sol\11155111\proveLife-latest.json
+
+
+# exit code: 0

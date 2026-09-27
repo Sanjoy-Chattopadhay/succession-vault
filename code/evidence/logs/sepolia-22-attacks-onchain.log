@@ -1,0 +1,21 @@
+# 2026-09-25 23:10:57 UTC  |  host  |  <repo>
+$ forge script script/DemoAttacks.s.sol --sig attacks() --rpc-url https://ethereum-sepolia-rpc.publicnode.com
+
+No files changed, compilation skipped
+Script ran successfully.
+
+== Logs ==
+  attack vault 0x9ae1259E4B77292901a99D56056DAf1E1Fadd226 lastLifeProof 1790377836
+  rejected as expected: A1 real credential replayed (issued before the vault) -> StaleOrFutureProof
+  rejected as expected: A2 real proof re-dated to the current time -> InvalidProof
+  rejected as expected: A3 real proof future-dated by one day -> StaleOrFutureProof
+  rejected as expected: A4 real proof under a foreign binding -> UnknownBinding
+  rejected as expected: A5 withdrawal by a non-owner -> NotOwner
+  rejected as expected: B1 epoch replayed -> BadEpoch
+  rejected as expected: B2 epoch claiming an unproven principal -> InvalidProof
+  rejected as expected: B3 enrollment with a forged root -> InvalidProof
+  rejected as expected: B4 epoch from a non-aggregator -> NotAggregator
+  rejected as expected: B5 epoch shorter than the minimum -> BadEpoch
+  mismatches: 0
+
+# exit code: 0

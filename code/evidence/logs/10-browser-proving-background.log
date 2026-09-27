@@ -1,0 +1,14 @@
+# 2026-09-18 09:24:56 UTC  |  host  |  <repo>
+$ cat reports/browser-proving-background.json
+
+{
+  "note": "In-app Chromium of the Claude desktop app, page web/prove.html, 10 runs after 1 warm-up. The app was not in the foreground, so Windows power throttling (EcoQoS) applied; compare with the throttled Node.js run (3.6 s) rather than the foreground one (0.44 s).",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Claude/2.2553.1 Chrome/152.0.7977.76 Safari/537.36 MSIX",
+  "cores": 16,
+  "results": [
+    { "circuit": "liveness", "runs": 10, "mean": 4799.4, "sd": 379.3, "min": 4363.8, "max": 5335.1, "verified": true },
+    { "circuit": "age", "runs": 10, "mean": 375.7, "sd": 68.3, "min": 287.3, "max": 483.2, "verified": true }
+  ]
+}
+
+# exit code: 0

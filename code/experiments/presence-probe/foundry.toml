@@ -1,0 +1,18 @@
+# Prototype of cheaper presence proofs (passkey / WebAuthn, optimistic ZK), measured on the
+# Fusaka (Osaka) EVM that has the P256VERIFY precompile (EIP-7951). Run from code/:
+#   forge test --root experiments/presence-probe --isolate -vv
+[profile.default]
+src = "src"
+test = "test"
+out = "out"
+cache_path = "cache"
+libs = ["../../lib", "../../node_modules"]
+solc_version = "0.8.28"
+evm_version = "osaka"
+optimizer = true
+optimizer_runs = 10000
+bytecode_hash = "none"
+remappings = [
+  "forge-std/=../../lib/forge-std/src/",
+  "@openzeppelin/contracts/=../../node_modules/@openzeppelin/contracts/",
+]

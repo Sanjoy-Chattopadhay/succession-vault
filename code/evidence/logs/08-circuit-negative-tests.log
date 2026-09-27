@@ -1,0 +1,78 @@
+# 2026-09-18 09:13:37 UTC  |  host  |  <repo>
+$ node js/test-circuits.mjs
+
+ERROR:  4 Error in template ForceEqualIfEnabled_241 line: 56
+Error in template EdDSAPoseidonVerifier_242 line: 117
+Error in template ProofOfLife_323 line: 58
+
+ERROR:  4 Error in template ForceEqualIfEnabled_241 line: 56
+Error in template EdDSAPoseidonVerifier_242 line: 117
+Error in template ProofOfLife_323 line: 58
+
+ERROR:  4 Error in template ForceEqualIfEnabled_241 line: 56
+Error in template EdDSAPoseidonVerifier_242 line: 117
+Error in template ProofOfLife_323 line: 58
+
+ERROR:  4 Error in template ForceEqualIfEnabled_241 line: 56
+Error in template EdDSAPoseidonVerifier_242 line: 117
+Error in template ProofOfLife_323 line: 58
+
+ERROR:  4 Error in template ProofOfLife_323 line: 38
+
+ERROR:  4 Error in template ForceEqualIfEnabled_241 line: 56
+Error in template EdDSAPoseidonVerifier_242 line: 117
+Error in template ProofOfLife_323 line: 58
+
+ERROR:  4 Error in template ForceEqualIfEnabled_241 line: 56
+Error in template SMTVerifier_322 line: 134
+Error in template ProofOfLife_323 line: 72
+
+ERROR:  4 Error in template ForceEqualIfEnabled_241 line: 56
+Error in template SMTVerifier_322 line: 134
+Error in template ProofOfLife_323 line: 72
+
+ERROR:  4 Error in template ForceEqualIfEnabled_241 line: 56
+Error in template SMTVerifier_322 line: 134
+Error in template ProofOfLife_323 line: 72
+
+ERROR:  4 Error in template ForceEqualIfEnabled_241 line: 56
+Error in template EdDSAPoseidonVerifier_242 line: 117
+Error in template ProofOfLife_323 line: 58
+
+ERROR:  4 Error in template AgeGate_75 line: 35
+
+ERROR:  4 Error in template AgeGate_75 line: 30
+
+ERROR:  4 Error in template AgeGate_75 line: 30
+
+ERROR:  4 Error in template Num2Bits_0 line: 38
+Error in template AgeGate_75 line: 25
+
+ERROR:  4 Error in template Num2Bits_0 line: 38
+Error in template AgeGate_75 line: 23
+
+┌─────────┬────────────┬────────────────────────────────────────────────────┬──────────┬───────────────────────────┬────────┐
+│ (index) │ circuit    │ case                                               │ expected │ observed                  │ result │
+├─────────┼────────────┼────────────────────────────────────────────────────┼──────────┼───────────────────────────┼────────┤
+│ 0       │ 'liveness' │ 'honest credential'                                │ 'accept' │ 'accept (proof verifies)' │ 'PASS' │
+│ 1       │ 'liveness' │ 'signature scalar S + 1'                           │ 'reject' │ 'reject'                  │ 'PASS' │
+│ 2       │ 'liveness' │ 'signature from another issuer, same key'          │ 'reject' │ 'reject'                  │ 'PASS' │
+│ 3       │ 'liveness' │ 'foreign issuer key with original signature'       │ 'reject' │ 'reject'                  │ 'PASS' │
+│ 4       │ 'liveness' │ 'subject DID swapped (claim slot 1)'               │ 'reject' │ 'reject'                  │ 'PASS' │
+│ 5       │ 'liveness' │ 'other credential type (claim slot 0)'             │ 'reject' │ 'reject'                  │ 'PASS' │
+│ 6       │ 'liveness' │ 'expiration / nonce altered (claim slot 4)'        │ 'reject' │ 'reject'                  │ 'PASS' │
+│ 7       │ 'liveness' │ 'liveness timestamp + 1 s'                         │ 'reject' │ 'reject'                  │ 'PASS' │
+│ 8       │ 'liveness' │ 'liveness timestamp moved 1 year ahead'            │ 'reject' │ 'reject'                  │ 'PASS' │
+│ 9       │ 'liveness' │ 'Merkle path sibling altered'                      │ 'reject' │ 'reject'                  │ 'PASS' │
+│ 10      │ 'liveness' │ 'Merkle root (claim slot 2) of another credential' │ 'reject' │ 'reject'                  │ 'PASS' │
+│ 11      │ 'age'      │ 'heir exactly of age (b = cutoff)'                 │ 'accept' │ 'accept (proof verifies)' │ 'PASS' │
+│ 12      │ 'age'      │ 'heir older than required'                         │ 'accept' │ 'accept (proof verifies)' │ 'PASS' │
+│ 13      │ 'age'      │ 'heir one day too young'                           │ 'reject' │ 'reject'                  │ 'PASS' │
+│ 14      │ 'age'      │ 'wrong salt'                                       │ 'reject' │ 'reject'                  │ 'PASS' │
+│ 15      │ 'age'      │ 'claimed birth date differs from committed'        │ 'reject' │ 'reject'                  │ 'PASS' │
+│ 16      │ 'age'      │ 'cutoff wraps the field (p - 1)'                   │ 'reject' │ 'reject'                  │ 'PASS' │
+│ 17      │ 'age'      │ 'birth date wraps the field (p - 1)'               │ 'reject' │ 'reject'                  │ 'PASS' │
+└─────────┴────────────┴────────────────────────────────────────────────────┴──────────┴───────────────────────────┴────────┘
+18/18 cases behave as expected
+
+# exit code: 0

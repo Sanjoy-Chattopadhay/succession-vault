@@ -1,0 +1,19 @@
+{
+  "ageVerifier": "0x5b56b4DaEA313f53F7bf8a40fb27672C3E2ba616",
+  "aggCapacity": 8,
+  "aggLookback": 20,
+  "aggMinEpoch": 300,
+  "aggWords": 1,
+  "authWindow": 86400,
+  "chainId": 11155111,
+  "demoERC1155": "0x97105DaE378868bD3329515705c3233591f4E45A",
+  "demoERC20": "0xCc444Ff269A436EcCe32282b9531b6425831200C",
+  "demoERC721": "0x6c914d479c354f2Fc356C688581EF9dFD898d176",
+  "factory": "0x03D47801F56f59BBec12D04d3157002538eb2BCa",
+  "livenessRegistry": "0x010481ad036E1B4Ee0C8B12d0F46847bF23f484b",
+  "livenessVerifier": "0xEEAC7141D0f022d9634C9834B2BFD982175EA973",
+  "minPeriod": 60,
+  "vaultImplementation": "0x637e3C78C80C6E7FfBa3F00Fe32B43C9355EDfe2",
+  "publicDemoCollectible": "0xaC90BC097ee020F9f9a8323bb0E3F10DA13049C0",
+  "publicDemoDollar": "0x12eEdD98d9AE04be230f1bF5f4930d4384f61321"
+}

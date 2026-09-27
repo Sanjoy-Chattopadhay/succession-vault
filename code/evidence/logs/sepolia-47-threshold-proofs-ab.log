@@ -1,0 +1,6 @@
+# 2026-09-25 23:26:16 UTC  |  host  |  <repo>
+$ node js/demo.mjs threshold-life --issuers A,B --tag ab
+
+proofs of life from A, B at 2026-09-25T23:26:00.000Z -> demo/threshold/life-ab.json
+
+# exit code: 0

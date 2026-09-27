@@ -1,0 +1,34 @@
+# 2026-09-25 21:27:54 UTC  |  host  |  <repo>
+$ forge script script/DemoAgg.s.sol --sig epoch() --rpc-url http://127.0.0.1:8545 --broadcast --slow --unlocked --sender 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+
+No files changed, compilation skipped
+Script ran successfully.
+
+== Logs ==
+  epoch 0 recorded; cohort slots covered: 248
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 31337
+
+Estimated gas price: 0.229671059 gwei
+
+Estimated total gas used for script: 465920
+
+Estimated amount required: 0.00010700833980928 ETH
+
+==========================
+
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+
+Transactions saved to: <repo>/broadcast\DemoAgg.s.sol\31337\epoch-latest.json
+
+Sensitive values saved to: <repo>/cache\DemoAgg.s.sol\31337\epoch-latest.json
+
+
+# exit code: 0

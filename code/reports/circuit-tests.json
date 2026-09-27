@@ -1,0 +1,128 @@
+[
+  {
+    "circuit": "liveness",
+    "case": "honest credential",
+    "expected": "accept",
+    "observed": "accept (proof verifies)",
+    "result": "PASS"
+  },
+  {
+    "circuit": "liveness",
+    "case": "signature scalar S + 1",
+    "expected": "reject",
+    "observed": "reject",
+    "result": "PASS"
+  },
+  {
+    "circuit": "liveness",
+    "case": "signature from another issuer, same key",
+    "expected": "reject",
+    "observed": "reject",
+    "result": "PASS"
+  },
+  {
+    "circuit": "liveness",
+    "case": "foreign issuer key with original signature",
+    "expected": "reject",
+    "observed": "reject",
+    "result": "PASS"
+  },
+  {
+    "circuit": "liveness",
+    "case": "subject DID swapped (claim slot 1)",
+    "expected": "reject",
+    "observed": "reject",
+    "result": "PASS"
+  },
+  {
+    "circuit": "liveness",
+    "case": "other credential type (claim slot 0)",
+    "expected": "reject",
+    "observed": "reject",
+    "result": "PASS"
+  },
+  {
+    "circuit": "liveness",
+    "case": "expiration / nonce altered (claim slot 4)",
+    "expected": "reject",
+    "observed": "reject",
+    "result": "PASS"
+  },
+  {
+    "circuit": "liveness",
+    "case": "liveness timestamp + 1 s",
+    "expected": "reject",
+    "observed": "reject",
+    "result": "PASS"
+  },
+  {
+    "circuit": "liveness",
+    "case": "liveness timestamp moved 1 year ahead",
+    "expected": "reject",
+    "observed": "reject",
+    "result": "PASS"
+  },
+  {
+    "circuit": "liveness",
+    "case": "Merkle path sibling altered",
+    "expected": "reject",
+    "observed": "reject",
+    "result": "PASS"
+  },
+  {
+    "circuit": "liveness",
+    "case": "Merkle root (claim slot 2) of another credential",
+    "expected": "reject",
+    "observed": "reject",
+    "result": "PASS"
+  },
+  {
+    "circuit": "age",
+    "case": "heir exactly of age (b = cutoff)",
+    "expected": "accept",
+    "observed": "accept (proof verifies)",
+    "result": "PASS"
+  },
+  {
+    "circuit": "age",
+    "case": "heir older than required",
+    "expected": "accept",
+    "observed": "accept (proof verifies)",
+    "result": "PASS"
+  },
+  {
+    "circuit": "age",
+    "case": "heir one day too young",
+    "expected": "reject",
+    "observed": "reject",
+    "result": "PASS"
+  },
+  {
+    "circuit": "age",
+    "case": "wrong salt",
+    "expected": "reject",
+    "observed": "reject",
+    "result": "PASS"
+  },
+  {
+    "circuit": "age",
+    "case": "claimed birth date differs from committed",
+    "expected": "reject",
+    "observed": "reject",
+    "result": "PASS"
+  },
+  {
+    "circuit": "age",
+    "case": "cutoff wraps the field (p - 1)",
+    "expected": "reject",
+    "observed": "reject",
+    "result": "PASS"
+  },
+  {
+    "circuit": "age",
+    "case": "birth date wraps the field (p - 1)",
+    "expected": "reject",
+    "observed": "reject",
+    "result": "PASS"
+  }
+]

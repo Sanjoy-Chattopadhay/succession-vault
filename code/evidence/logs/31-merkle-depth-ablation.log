@@ -1,0 +1,7 @@
+# 2026-09-18 15:52:10 UTC  |  host  |  <repo>
+$ powershell -ExecutionPolicy Bypass -File scripts/unthrottled.ps1 node js/bench-depth.mjs fixtures/private/liveness-2025-12-14.json zk/variants/variants.json 10
+
+{"levels":40,"constraints":16253,"zkeyMB":9.6,"witnessMs":{"mean":99.6,"sd":4.3},"proveMs":{"mean":457.7,"sd":13.2}}
+{"levels":16,"constraints":10325,"zkeyMB":6.8,"witnessMs":{"mean":91.9,"sd":3.4},"proveMs":{"mean":343.6,"sd":5.8}}
+
+# exit code: 0

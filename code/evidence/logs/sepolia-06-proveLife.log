@@ -1,0 +1,39 @@
+# 2026-09-25 22:23:26 UTC  |  host  |  <repo>
+$ forge script script/Demo.s.sol --sig proveLife() --rpc-url https://ethereum-sepolia-rpc.publicnode.com --broadcast --slow
+
+No files changed, compilation skipped
+Script ran successfully.
+
+== Logs ==
+  status:         Alive
+  now:            1790375004
+  deadline:       1790375592
+  claimable at:   1790375892
+  last heartbeat: 1790374992
+  last life proof: 1790374992 (zk)
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 11155111
+
+Estimated gas price: 1.865750244 gwei
+
+Estimated total gas used for script: 327925
+
+Estimated amount required: 0.0006118261487637 ETH
+
+==========================
+
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+
+Transactions saved to: <repo>/broadcast\Demo.s.sol\11155111\proveLife-latest.json
+
+Sensitive values saved to: <repo>/cache\Demo.s.sol\11155111\proveLife-latest.json
+
+
+# exit code: 0

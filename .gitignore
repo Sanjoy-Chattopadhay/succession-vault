@@ -1,0 +1,9 @@
+node_modules/
+dist/
+out/
+cache/
+.env
+**/.env
+dapp/tools/out/
+.DS_Store
+Thumbs.db

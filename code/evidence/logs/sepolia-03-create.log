@@ -1,0 +1,40 @@
+# 2026-09-25 22:15:29 UTC  |  host  |  <repo>
+$ forge script script/Demo.s.sol --sig create() --rpc-url https://ethereum-sepolia-rpc.publicnode.com --broadcast --slow
+
+No files changed, compilation skipped
+Script ran successfully.
+
+== Logs ==
+  vault: 0xc7275c9a4FFBBd2a0AC4E60dA5615931f70DDd77
+  status:         Alive
+  now:            1790374524
+  deadline:       1790375124
+  claimable at:   1790375424
+  last heartbeat: 1790374524
+  last life proof: 1790374524 (creation)
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 11155111
+
+Estimated gas price: 1.978857934 gwei
+
+Estimated total gas used for script: 551188
+
+Estimated amount required: 0.001090722746925592 ETH
+
+==========================
+
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+
+Transactions saved to: <repo>/broadcast\Demo.s.sol\11155111\create-latest.json
+
+Sensitive values saved to: <repo>/cache\Demo.s.sol\11155111\create-latest.json
+
+
+# exit code: 0

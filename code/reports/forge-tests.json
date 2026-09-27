@@ -1,0 +1,17 @@
+{
+  "command": "forge test",
+  "suites": {
+    "ProofSystems": 1,
+    "BoundSweep": 1,
+    "RegistryTest": 24,
+    "GasBenchmark": 4,
+    "Comparison": 1,
+    "RegistryGas": 3,
+    "ThresholdTest": 9,
+    "InvariantTest": 6,
+    "BequestVaultTest": 41
+  },
+  "passed": 90,
+  "failed": 0,
+  "total": 90
+}

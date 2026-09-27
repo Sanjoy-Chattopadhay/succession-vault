@@ -1,0 +1,34 @@
+# 2026-09-25 22:24:25 UTC  |  host  |  <repo>
+$ forge script script/Demo.s.sol --sig addRealBinding() --rpc-url https://ethereum-sepolia-rpc.publicnode.com --broadcast --slow
+
+No files changed, compilation skipped
+Script ran successfully.
+
+== Logs ==
+  registered second binding (Billions issuer, owner DID)
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 11155111
+
+Estimated gas price: 2.047936952 gwei
+
+Estimated total gas used for script: 94617
+
+Estimated amount required: 0.000193769650587384 ETH
+
+==========================
+
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+
+Transactions saved to: <repo>/broadcast\Demo.s.sol\11155111\addRealBinding-latest.json
+
+Sensitive values saved to: <repo>/cache\Demo.s.sol\11155111\addRealBinding-latest.json
+
+
+# exit code: 0

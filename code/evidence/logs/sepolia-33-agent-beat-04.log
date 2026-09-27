@@ -1,0 +1,39 @@
+# 2026-09-25 23:16:00 UTC  |  host  |  <repo>
+$ forge script script/DemoAgent.s.sol --sig beat() --rpc-url https://ethereum-sepolia-rpc.publicnode.com --broadcast --slow
+
+No files changed, compilation skipped
+Script ran successfully.
+
+== Logs ==
+  AGENT_STATUS Alive
+  AGENT_NOW 1790378160
+  AGENT_TH 1790378160
+  AGENT_TL 1790377896
+  AGENT_DEADLINE 1790378340
+  AGENT_CLAIMABLE_AT 1790378460
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 11155111
+
+Estimated gas price: 1.949934956 gwei
+
+Estimated total gas used for script: 43946
+
+Estimated amount required: 0.000085691841576376 ETH
+
+==========================
+
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+
+Transactions saved to: <repo>/broadcast\DemoAgent.s.sol\11155111\beat-latest.json
+
+Sensitive values saved to: <repo>/cache\DemoAgent.s.sol\11155111\beat-latest.json
+
+
+# exit code: 0

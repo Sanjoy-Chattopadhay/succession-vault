@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Bequest browser proving</title>
+<style>
+  body { font: 14px/1.5 system-ui, sans-serif; margin: 24px; background: #fff; color: #111; }
+  pre { background: #f4f4f5; padding: 12px; border-radius: 6px; }
+  table { border-collapse: collapse; } td, th { border: 1px solid #ccc; padding: 4px 10px; text-align: right; }
+  th:first-child, td:first-child { text-align: left; }
+</style>
+</head>
+<body>
+<h1>Bequest: Groth16 proving in the browser</h1>
+<p id="env"></p>
+<p id="status">loading…</p>
+<table id="results"><tr><th>circuit</th><th>runs</th><th>mean ms</th><th>sd ms</th><th>min ms</th><th>max ms</th><th>verified</th></tr></table>
+<pre id="json"></pre>
+<script src="../node_modules/snarkjs/build/snarkjs.min.js"></script>
+<script>
+const RUNS = Number(new URLSearchParams(location.search).get("runs") || 10);
+const stats = (xs) => {
+  const m = xs.reduce((a, b) => a + b, 0) / xs.length;
+  const sd = Math.sqrt(xs.reduce((a, b) => a + (b - m) ** 2, 0) / Math.max(1, xs.length - 1));
+  return { mean: +m.toFixed(1), sd: +sd.toFixed(1), min: +Math.min(...xs).toFixed(1), max: +Math.max(...xs).toFixed(1) };
+};
+async function bench(circuit) {
+  const input = await (await fetch(`${circuit}-input.json`)).json();
+  const vkey = await (await fetch(`../zk/build/${circuit}_vkey.json`)).json();
+  const wasm = `../zk/build/${circuit}_js/${circuit}.wasm`, zkey = `../zk/build/${circuit}.zkey`;
+  const times = []; let verified = true;
+  for (let i = -1; i < RUNS; i++) {               // one warm-up run
+    document.getElementById("status").textContent = `${circuit}: run ${i + 2} of ${RUNS + 1}`;
+    const t = performance.now();
+    const { proof, publicSignals } = await snarkjs.groth16.fullProve(input, wasm, zkey);
+    const ms = performance.now() - t;
+    if (i >= 0) { times.push(ms); verified = verified && await snarkjs.groth16.verify(vkey, publicSignals, proof); }
+  }
+  return { circuit, runs: RUNS, ...stats(times), verified };
+}
+(async () => {
+  document.getElementById("env").textContent = `${navigator.userAgent} | hardwareConcurrency=${navigator.hardwareConcurrency}`;
+  const out = [];
+  for (const c of ["liveness", "age"]) {
+    const r = await bench(c); out.push(r);
+    const row = document.getElementById("results").insertRow();
+    for (const v of [r.circuit, r.runs, r.mean, r.sd, r.min, r.max, r.verified]) row.insertCell().textContent = v;
+  }
+  document.getElementById("status").textContent = "done";
+  document.getElementById("json").textContent = JSON.stringify({ userAgent: navigator.userAgent, cores: navigator.hardwareConcurrency, results: out }, null, 2);
+})().catch((e) => { document.getElementById("status").textContent = "error: " + e; });
+</script>
+</body>
+</html>

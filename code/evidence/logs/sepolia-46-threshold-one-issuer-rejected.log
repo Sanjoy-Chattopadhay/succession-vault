@@ -1,0 +1,15 @@
+# 2026-09-25 23:26:08 UTC  |  host  |  <repo>
+$ forge script script/DemoThreshold.s.sol --sig tryAlone() --rpc-url https://ethereum-sepolia-rpc.publicnode.com
+
+No files changed, compilation skipped
+Script ran successfully.
+
+== Logs ==
+  ALONE_SINGLE rejected ThresholdNotMet
+  ALONE_MULTI rejected ThresholdNotMet
+  THR_STATUS Alive
+  THR_NOW 1790378760
+  THR_TL 1790378664
+  THR_DEADLINE 1790379264
+
+# exit code: 0

@@ -1,0 +1,24 @@
+{
+    "exitcode": 0,
+    "test_results": {
+        "test/halmos/VaultSymbolic.t.sol:VaultSymbolic": [
+            {
+                "name": "check_P9_singleProofNeedsThresholdOne((uint256[2],uint256[2][2],uint256[2]),uint256,uint256)",
+                "exitcode": 0,
+                "num_models": 0,
+                "models": [],
+                "num_paths": [
+                    8,
+                    2,
+                    0
+                ],
+                "time": [
+                    0.23160669999197125,
+                    0.23158230000990443,
+                    1.9400002202019095e-05
+                ],
+                "num_bounded_loops": 0
+            }
+        ]
+    }
+}

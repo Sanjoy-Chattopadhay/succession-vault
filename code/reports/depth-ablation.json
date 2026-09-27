@@ -1,0 +1,32 @@
+{
+  "credentialDepth": 5,
+  "runs": 10,
+  "variants": [
+    {
+      "levels": 40,
+      "constraints": 16253,
+      "zkeyMB": 9.6,
+      "witnessMs": {
+        "mean": 99.6,
+        "sd": 4.3
+      },
+      "proveMs": {
+        "mean": 457.7,
+        "sd": 13.2
+      }
+    },
+    {
+      "levels": 16,
+      "constraints": 10325,
+      "zkeyMB": 6.8,
+      "witnessMs": {
+        "mean": 91.9,
+        "sd": 3.4
+      },
+      "proveMs": {
+        "mean": 343.6,
+        "sd": 5.8
+      }
+    }
+  ]
+}

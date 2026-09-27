@@ -1,0 +1,30 @@
+No files changed, compilation skipped
+Script ran successfully.
+
+== Logs ==
+  DEMO_COLLECTIBLE 0xaC90BC097ee020F9f9a8323bb0E3F10DA13049C0
+  DEMO_DOLLAR 0x12eEdD98d9AE04be230f1bF5f4930d4384f61321
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 11155111
+
+Estimated gas price: 2.168598352 gwei
+
+Estimated total gas used for script: 2501201
+
+Estimated amount required: 0.005424100366620752 ETH
+
+==========================
+
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+
+Transactions saved to: <repo>/broadcast\DemoPublicTokens.s.sol\11155111\run-latest.json
+
+Sensitive values saved to: <repo>/cache\DemoPublicTokens.s.sol\11155111\run-latest.json
+

@@ -1,0 +1,24 @@
+{
+    "exitcode": 0,
+    "test_results": {
+        "test/halmos/VaultSymbolic.t.sol:VaultSymbolic": [
+            {
+                "name": "check_P7_doubleClaimReverts((uint256,address,uint8,address,uint256,uint16,uint40,uint8,uint256),bytes32[])",
+                "exitcode": 0,
+                "num_models": 0,
+                "models": [],
+                "num_paths": [
+                    147,
+                    129,
+                    0
+                ],
+                "time": [
+                    2.8390780000045197,
+                    2.839056500000879,
+                    1.750000228639692e-05
+                ],
+                "num_bounded_loops": 0
+            }
+        ]
+    }
+}

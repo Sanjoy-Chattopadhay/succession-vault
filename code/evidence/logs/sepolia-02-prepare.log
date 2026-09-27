@@ -1,0 +1,7 @@
+# 2026-09-25 22:15:26 UTC  |  host  |  <repo>
+$ node js/demo.mjs prepare --test-issuer --also-credential fixtures/private/liveness-2025-12-14.json
+
+owner binding (test-issuer): 6179062901531867563342998969998275150153020987600441866130857308702346293750
+will root: 0x6daadb14863828b4c31202464a34a08593014e2589ebf9a75bf04ee03d2c10b3 (8 bequests)
+
+# exit code: 0

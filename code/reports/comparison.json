@@ -1,0 +1,122 @@
+{
+  "n1": {
+    "bequest": {
+      "keeper": 0,
+      "setup": 293908,
+      "succession": 421016,
+      "total": 714924,
+      "transactions": 5
+    },
+    "bequestNoAgeGate": {
+      "keeper": 0,
+      "setup": 293932,
+      "succession": 207675,
+      "total": 501607,
+      "transactions": 5
+    },
+    "heirs": 1,
+    "legacy": {
+      "keeper": 173074,
+      "setup": 789755,
+      "succession": 544668,
+      "total": 1507497,
+      "transactions": 13
+    }
+  },
+  "n16": {
+    "bequest": {
+      "keeper": 0,
+      "setup": 293908,
+      "succession": 5313597,
+      "total": 5607505,
+      "transactions": 20
+    },
+    "bequestNoAgeGate": {
+      "keeper": 0,
+      "setup": 293932,
+      "succession": 1948468,
+      "total": 2242400,
+      "transactions": 20
+    },
+    "heirs": 16,
+    "legacy": {
+      "keeper": 173074,
+      "setup": 2736170,
+      "succession": 6003213,
+      "total": 8912457,
+      "transactions": 44
+    }
+  },
+  "n2": {
+    "bequest": {
+      "keeper": 0,
+      "setup": 293920,
+      "succession": 743764,
+      "total": 1037684,
+      "transactions": 6
+    },
+    "bequestNoAgeGate": {
+      "keeper": 0,
+      "setup": 293920,
+      "succession": 320284,
+      "total": 614204,
+      "transactions": 6
+    },
+    "heirs": 2,
+    "legacy": {
+      "keeper": 173074,
+      "setup": 919516,
+      "succession": 904628,
+      "total": 1997218,
+      "transactions": 15
+    }
+  },
+  "n4": {
+    "bequest": {
+      "keeper": 0,
+      "setup": 293920,
+      "succession": 1392061,
+      "total": 1685981,
+      "transactions": 8
+    },
+    "bequestNoAgeGate": {
+      "keeper": 0,
+      "setup": 293920,
+      "succession": 548519,
+      "total": 842439,
+      "transactions": 8
+    },
+    "heirs": 4,
+    "legacy": {
+      "keeper": 173074,
+      "setup": 1179038,
+      "succession": 1624548,
+      "total": 2976660,
+      "transactions": 19
+    }
+  },
+  "n8": {
+    "bequest": {
+      "keeper": 0,
+      "setup": 293920,
+      "succession": 2695388,
+      "total": 2989308,
+      "transactions": 12
+    },
+    "bequestNoAgeGate": {
+      "keeper": 0,
+      "setup": 293932,
+      "succession": 1011019,
+      "total": 1304951,
+      "transactions": 12
+    },
+    "heirs": 8,
+    "legacy": {
+      "keeper": 173074,
+      "setup": 1698082,
+      "succession": 3064388,
+      "total": 4935544,
+      "transactions": 27
+    }
+  }
+}

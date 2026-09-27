@@ -1,0 +1,34 @@
+# 2026-09-25 21:41:55 UTC  |  host  |  <repo>
+$ forge script script/DemoThreshold.s.sol --sig create() --rpc-url http://127.0.0.1:8545 --broadcast --slow --unlocked --sender 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+
+No files changed, compilation skipped
+Script ran successfully.
+
+== Logs ==
+  threshold vault: 0x6b9c4dDC1F23330380B1F518183F07362FbF7075
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 31337
+
+Estimated gas price: 0.002522315 gwei
+
+Estimated total gas used for script: 234300
+
+Estimated amount required: 0.0000005909784045 ETH
+
+==========================
+
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+
+Transactions saved to: <repo>/broadcast\DemoThreshold.s.sol\31337\create-latest.json
+
+Sensitive values saved to: <repo>/cache\DemoThreshold.s.sol\31337\create-latest.json
+
+
+# exit code: 0

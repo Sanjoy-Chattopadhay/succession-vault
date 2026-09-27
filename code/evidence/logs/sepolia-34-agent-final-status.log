@@ -1,0 +1,15 @@
+# 2026-09-25 23:23:34 UTC  |  host  |  <repo>
+$ forge script script/DemoAgent.s.sol --sig status() --rpc-url https://ethereum-sepolia-rpc.publicnode.com
+
+No files changed, compilation skipped
+Script ran successfully.
+
+== Logs ==
+  AGENT_STATUS Claimable
+  AGENT_NOW 1790378616
+  AGENT_TH 1790378568
+  AGENT_TL 1790377896
+  AGENT_DEADLINE 1790378376
+  AGENT_CLAIMABLE_AT 1790378496
+
+# exit code: 0

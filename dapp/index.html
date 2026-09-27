@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Succession Vault — NFT inheritance with private proof of life</title>
+<meta name="description" content="Leave NFTs and tokens to your heirs without a trustee. A found or stolen key cannot keep the vault alive forever: only a private zero-knowledge proof of life can. Demo on Ethereum Sepolia.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231E6F6A'/%3E%3Cpath d='M10 14v-3a6 6 0 0 1 12 0v3' fill='none' stroke='white' stroke-width='2.5'/%3E%3Crect x='8' y='14' width='16' height='11' rx='2.5' fill='white'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#/">
+    <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><rect width="32" height="32" rx="8"/><path d="M10 14v-3a6 6 0 0 1 12 0v3"/><rect x="8" y="14" width="16" height="11" rx="2.5"/></svg></span>
+    <span class="brand-name">Succession Vault</span>
+  </a>
+  <nav class="tabs" id="tabs">
+    <a href="#/" data-route="overview">Overview</a>
+    <a href="#/create" data-route="create">Create</a>
+    <a href="#/vaults" data-route="vaults">My vaults</a>
+    <a href="#/claim" data-route="claim">Heir claim</a>
+    <a href="#/explore" data-route="explore">Explore</a>
+  </nav>
+  <div class="wallet">
+    <span class="net-pill" title="All contracts run on the Ethereum Sepolia test network">Sepolia testnet</span>
+    <button class="btn btn-primary" id="connect">Connect wallet</button>
+  </div>
+</header>
+<main id="view" class="view"></main>
+<footer class="foot">
+  <p>Research demo on the Sepolia test network. Test assets only. The demo liveness issuer's key is public,
+  so its "proofs of life" are for trying the flow, not for protecting real assets.</p>
+</footer>
+<div id="toasts" class="toasts" aria-live="polite"></div>
+<script src="snarkjs.min.js"></script>
+<script type="module" src="app.js"></script>
+</body>
+</html>

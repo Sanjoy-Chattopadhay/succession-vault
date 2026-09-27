@@ -1,0 +1,8 @@
+# 2026-09-25 21:27:21 UTC  |  host  |  <repo>
+$ node js/demo.mjs agg
+
+enrollment proof for slot 0 (613 ms)
+epoch proof, cohort of 8, 1 present (5326 ms)
+epoch window: 2026-09-25T21:27:18.000Z -> 2026-09-25T21:32:18.000Z
+
+# exit code: 0

@@ -1,0 +1,41 @@
+# 2026-09-25 22:39:02 UTC  |  host  |  <repo>
+$ forge script script/Demo.s.sol --sig claimAll() --rpc-url https://ethereum-sepolia-rpc.publicnode.com --broadcast --slow
+
+No files changed, compilation skipped
+Script ran successfully.
+
+== Logs ==
+  claimed bequest 0
+  claimed bequest 1
+  bequest 2 time-locked until 1790376029
+  claimed bequest 3
+  claimed age-restricted bequest 4
+  bequest 5 age-restricted and no proof (heir too young?)
+  claimed bequest 6
+  claimed bequest 7
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 11155111
+
+Estimated gas price: 1.960932678 gwei
+
+Estimated total gas used for script: 1114146
+
+Estimated amount required: 0.002184765299462988 ETH
+
+==========================
+
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+
+Transactions saved to: <repo>/broadcast\Demo.s.sol\11155111\claimAll-latest.json
+
+Sensitive values saved to: <repo>/cache\Demo.s.sol\11155111\claimAll-latest.json
+
+
+# exit code: 0

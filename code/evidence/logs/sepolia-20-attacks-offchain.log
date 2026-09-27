@@ -1,0 +1,49 @@
+# 2026-09-25 23:10:02 UTC  |  host  |  <repo>
+$ node js/attacks.mjs
+
+honest real credential: proof generated (1239 ms), liveness time 2025-12-14T19:49:56.000Z
+ERROR:  4 Error in template ForceEqualIfEnabled_241 line: 56
+Error in template SMTVerifier_322 line: 134
+Error in template ProofOfLife_323 line: 72
+
+REJECTED  re-dated: livenessTimestamp set to now -- circuit constraint violated during witness generation
+ERROR:  4 Error in template ForceEqualIfEnabled_241 line: 56
+Error in template SMTVerifier_322 line: 134
+Error in template ProofOfLife_323 line: 72
+
+REJECTED  re-dated by one second -- circuit constraint violated during witness generation
+ERROR:  4 Error in template ForceEqualIfEnabled_241 line: 56
+Error in template SMTVerifier_322 line: 134
+Error in template ProofOfLife_323 line: 72
+
+REJECTED  moved to another DID (credentialSubject.id) -- circuit constraint violated during witness generation
+ERROR:  4 Error in template ForceEqualIfEnabled_241 line: 56
+Error in template SMTVerifier_322 line: 134
+Error in template ProofOfLife_323 line: 72
+
+REJECTED  validity extended (expirationDate + 10 years) -- circuit constraint violated during witness generation
+REJECTED  type changed to another credential type -- Safe mode validation error.
+ERROR:  4 Error in template ForceEqualIfEnabled_241 line: 56
+Error in template EdDSAPoseidonVerifier_242 line: 117
+Error in template ProofOfLife_323 line: 58
+
+REJECTED  signed claim edited: subject slot (c1) of coreClaim -- circuit constraint violated during witness generation
+ERROR:  4 Error in template ForceEqualIfEnabled_241 line: 56
+Error in template EdDSAPoseidonVerifier_242 line: 117
+Error in template ProofOfLife_323 line: 58
+
+REJECTED  signed claim edited: expiration slot (c4) of coreClaim -- circuit constraint violated during witness generation
+ERROR:  4 Error in template ForceEqualIfEnabled_241 line: 56
+Error in template EdDSAPoseidonVerifier_242 line: 117
+Error in template ProofOfLife_323 line: 58
+
+REJECTED  signature altered (last byte) -- circuit constraint violated during witness generation
+ERROR:  4 Error in template ForceEqualIfEnabled_241 line: 56
+Error in template EdDSAPoseidonVerifier_242 line: 117
+Error in template ProofOfLife_323 line: 58
+
+REJECTED  issuer key swapped in authCoreClaim -- circuit constraint violated during witness generation
+
+9 of 9 edits rejected; vectors -> demo/attacks/vectors.json
+
+# exit code: 0

@@ -1,0 +1,39 @@
+# 2026-09-25 21:27:18 UTC  |  host  |  <repo>
+$ forge script script/Demo.s.sol --sig heartbeat() --rpc-url http://127.0.0.1:8545 --broadcast --slow --unlocked --sender 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+
+No files changed, compilation skipped
+Script ran successfully.
+
+== Logs ==
+  status:         Alive
+  now:            1790371637
+  deadline:       1790372237
+  claimable at:   1790372537
+  last heartbeat: 1790371637
+  last life proof: 1790371637 (creation)
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 31337
+
+Estimated gas price: 0.342549441 gwei
+
+Estimated total gas used for script: 39851
+
+Estimated amount required: 0.000013650937773291 ETH
+
+==========================
+
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+
+Transactions saved to: <repo>/broadcast\Demo.s.sol\31337\heartbeat-latest.json
+
+Sensitive values saved to: <repo>/cache\Demo.s.sol\31337\heartbeat-latest.json
+
+
+# exit code: 0

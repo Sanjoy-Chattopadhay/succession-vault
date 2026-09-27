@@ -1,0 +1,174 @@
+{
+  "generatedBy": "js/sepolia-summary.mjs",
+  "deployment": {
+    "ageVerifier": "0x5b56b4DaEA313f53F7bf8a40fb27672C3E2ba616",
+    "aggCapacity": 8,
+    "aggLookback": 20,
+    "aggMinEpoch": 300,
+    "aggWords": 1,
+    "authWindow": 86400,
+    "chainId": 11155111,
+    "demoERC1155": "0x97105DaE378868bD3329515705c3233591f4E45A",
+    "demoERC20": "0xCc444Ff269A436EcCe32282b9531b6425831200C",
+    "demoERC721": "0x6c914d479c354f2Fc356C688581EF9dFD898d176",
+    "factory": "0x03D47801F56f59BBec12D04d3157002538eb2BCa",
+    "livenessRegistry": "0x010481ad036E1B4Ee0C8B12d0F46847bF23f484b",
+    "livenessVerifier": "0xEEAC7141D0f022d9634C9834B2BFD982175EA973",
+    "minPeriod": 60,
+    "vaultImplementation": "0x637e3C78C80C6E7FfBa3F00Fe32B43C9355EDfe2"
+  },
+  "threshold": {
+    "aloneSingle": "rejected (ThresholdNotMet)",
+    "aloneMulti": "rejected (ThresholdNotMet)",
+    "aloneRejected": 2,
+    "multiAccepted": 2,
+    "multiGas": [
+      444203,
+      444179
+    ],
+    "multiTx": [
+      "0x333eb7f47db6e223d6476fd95eae56ecf580f751359635081c73ed94f521415e",
+      "0x06bae2edf2900abe2c4127e759178ef22d236afa8daa4739a14b1edb2ff10706"
+    ],
+    "setThresholdGas": [
+      56804,
+      56804,
+      39692
+    ]
+  },
+  "lifecycle": {
+    "transactions": 30,
+    "reverted": 0,
+    "totalGas": 13228670,
+    "comparable": {
+      "createVault": {
+        "live": 169630,
+        "bench": 168899,
+        "deviationPct": 0.43
+      },
+      "heartbeat": {
+        "live": 30049,
+        "bench": 30049,
+        "deviationPct": 0
+      },
+      "proveLife": {
+        "live": 237412,
+        "bench": 237400,
+        "deviationPct": 0.01
+      },
+      "enrollInRegistry": {
+        "live": 326006,
+        "bench": 325982,
+        "deviationPct": 0.01
+      },
+      "submitEpoch": {
+        "live": 318566,
+        "bench": 318542,
+        "deviationPct": 0.01
+      },
+      "claimETH": {
+        "live": 85716,
+        "bench": 85188,
+        "deviationPct": 0.62
+      },
+      "claimERC20_firstOfPool": {
+        "live": 102438,
+        "bench": 101620,
+        "deviationPct": 0.8
+      },
+      "claimERC721": {
+        "live": 80173,
+        "bench": 79914,
+        "deviationPct": 0.32
+      },
+      "claimERC1155": {
+        "live": 102455,
+        "bench": 101686,
+        "deviationPct": 0.76
+      },
+      "claimWithAgeProof": {
+        "live": 291958,
+        "bench": 291560,
+        "deviationPct": 0.14
+      }
+    },
+    "maxDeviationPct": 0.8,
+    "registryRead": {
+      "firstClaim": {
+        "live": 143887,
+        "bench": 125944,
+        "extra": 17943
+      },
+      "withdraw": {
+        "live": 55222,
+        "bench": 37855,
+        "extra": 17367
+      }
+    },
+    "notComparable": {
+      "claimTranche": {
+        "live": 60836,
+        "why": "last ETH claimant; the heir already held ETH from an earlier claim"
+      },
+      "sweeps": {
+        "live": [
+          53960,
+          80422
+        ],
+        "why": "ETH pool already fully claimed; token sweep paid out the minor's share"
+      },
+      "setBinding": {
+        "live": 68502,
+        "why": "no benchmark row; owner action in a registry-enabled vault"
+      }
+    }
+  },
+  "attacks": {
+    "offchainEditsRejected": 9,
+    "offchainEditsTotal": 9,
+    "onchainRejected": 10,
+    "onchainAllAsExpected": true,
+    "onchain": [
+      {
+        "attack": "A1 real credential replayed (issued before the vault)",
+        "rejectedWith": "StaleOrFutureProof"
+      },
+      {
+        "attack": "A2 real proof re-dated to the current time",
+        "rejectedWith": "InvalidProof"
+      },
+      {
+        "attack": "A3 real proof future-dated by one day",
+        "rejectedWith": "StaleOrFutureProof"
+      },
+      {
+        "attack": "A4 real proof under a foreign binding",
+        "rejectedWith": "UnknownBinding"
+      },
+      {
+        "attack": "A5 withdrawal by a non-owner",
+        "rejectedWith": "NotOwner"
+      },
+      {
+        "attack": "B1 epoch replayed",
+        "rejectedWith": "BadEpoch"
+      },
+      {
+        "attack": "B2 epoch claiming an unproven principal",
+        "rejectedWith": "InvalidProof"
+      },
+      {
+        "attack": "B3 enrollment with a forged root",
+        "rejectedWith": "InvalidProof"
+      },
+      {
+        "attack": "B4 epoch from a non-aggregator",
+        "rejectedWith": "NotAggregator"
+      },
+      {
+        "attack": "B5 epoch shorter than the minimum",
+        "rejectedWith": "BadEpoch"
+      }
+    ]
+  }
+}

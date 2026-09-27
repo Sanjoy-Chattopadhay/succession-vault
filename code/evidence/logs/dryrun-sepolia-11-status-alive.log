@@ -1,0 +1,15 @@
+# 2026-09-25 21:28:21 UTC  |  host  |  <repo>
+$ forge script script/Demo.s.sol --sig status() --rpc-url http://127.0.0.1:8545 --unlocked --sender 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+
+No files changed, compilation skipped
+Script ran successfully.
+
+== Logs ==
+  status:         Alive
+  now:            1790371990
+  deadline:       1790372573
+  claimable at:   1790372873
+  last heartbeat: 1790371973
+  last life proof: 1790371973 (zk)
+
+# exit code: 0

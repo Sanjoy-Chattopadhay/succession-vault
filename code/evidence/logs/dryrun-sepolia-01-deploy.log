@@ -1,0 +1,36 @@
+# 2026-09-25 21:27:01 UTC  |  host  |  <repo>
+$ forge script script/Deploy.s.sol --rpc-url http://127.0.0.1:8545 --broadcast --slow --unlocked --sender 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+
+No files changed, compilation skipped
+Script ran successfully.
+
+== Logs ==
+  factory:  0x0165878A594ca255338adfa4d48449f69242Eb8F
+  registry: 0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9
+  written:  deployments/31337.json
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 31337
+
+Estimated gas price: 2.000000001 gwei
+
+Estimated total gas used for script: 14039363
+
+Estimated amount required: 0.028078726014039363 ETH
+
+==========================
+
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+
+Transactions saved to: <repo>/broadcast\Deploy.s.sol\31337\run-latest.json
+
+Sensitive values saved to: <repo>/cache\Deploy.s.sol\31337\run-latest.json
+
+
+# exit code: 0

@@ -1,0 +1,6 @@
+# 2026-09-25 21:27:59 UTC  |  host  |  <repo>
+$ node js/demo.mjs life --test-issuer
+
+proof of life for 2026-09-25T21:32:53.000Z (871 ms)
+
+# exit code: 0

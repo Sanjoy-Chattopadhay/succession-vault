@@ -17,8 +17,8 @@ jobs:
       run:
         working-directory: code
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           node-version: 22
           cache: npm
@@ -26,7 +26,7 @@ jobs:
       - run: npm ci --ignore-scripts
       - uses: foundry-rs/foundry-toolchain@v1
         with:
-          version: stable
+          version: v1.7.1   # the version behind the published measurements
       - run: forge build
       - run: forge test
 
@@ -37,8 +37,8 @@ jobs:
       run:
         working-directory: dapp
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           node-version: 22
           cache: npm

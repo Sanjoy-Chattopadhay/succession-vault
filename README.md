@@ -159,7 +159,7 @@ The diagrams are draw.io files in [`docs/diagrams/`](docs/diagrams/), with PDF a
 
 | Evidence | Result |
 |---|---|
-| Foundry tests: unit, fuzz and invariant | 90 / 90 pass |
+| Foundry: 84 unit and fuzz tests and 6 invariants (random call sequences) | all 90 pass |
 | Symbolic execution with Halmos, from an arbitrary vault state under arbitrary calls | 11 / 11 properties proved; 2 / 2 negative controls refuted |
 | Circuit tests: honest and manipulated witnesses | 18 cases, all as expected |
 | Live run on Sepolia | 30 life-cycle transactions, none reverted; 10 / 10 on-chain attacks and 9 / 9 credential edits rejected |

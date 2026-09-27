@@ -69,7 +69,7 @@ heirs are until they claim.
 ## Screenshots
 
 All screenshots show real vaults on Sepolia: [`0xC625…f7Ce`](https://sepolia.etherscan.io/address/0xC62525e710cEcB5Db4F943ac761b18C66d25f7Ce)
-(alive) and [`0x6AF5…fec6`](https://sepolia.etherscan.io/address/0x6AF55cFf0ACf499b95079f383B22aE83EB70fec6)
+(alive when these were taken; its demo timers are minutes long) and [`0x6AF5…fec6`](https://sepolia.etherscan.io/address/0x6AF55cFf0ACf499b95079f383B22aE83EB70fec6)
 (its owner went silent, the heirs claimed, one of them with an age proof, and the rest was swept).
 They are taken by [`dapp/tools/screenshots.mjs`](dapp/tools/screenshots.mjs).
 
